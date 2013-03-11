@@ -1,0 +1,12 @@
+<h1>A form for viewing questions</h1>
+
+<p>Q: <%= @question.qn %></p>
+<p>A: <%= @question.correct %></p>
+<div class="incorrect">
+  <p>Incorrect options</p>
+  <ul>
+    <li><%= @question.option1 %></li>
+    <li><%= @question.option2 %></li>
+    <li><%= @question.option3 %></li>
+  </ul>
+</div>
