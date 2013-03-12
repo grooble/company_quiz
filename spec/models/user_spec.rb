@@ -40,7 +40,7 @@ describe User do
   it { should respond_to(:unfollow!) }
   
   it { should be_valid }
-  it {should_not be_admin }
+  it { should_not be_admin }
   
   describe "following" do
     let(:other_user) { FactoryGirl.create(:user) }

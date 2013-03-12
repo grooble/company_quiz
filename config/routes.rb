@@ -16,6 +16,7 @@ SampleApp::Application.routes.draw do
   root to: 'static_pages#home'
   # adding quiz functionality
   match '/ask', to: 'questions#ask'
+  match '/answer', to: 'questions#answer'
   # for quiz
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

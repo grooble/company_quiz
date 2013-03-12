@@ -16,5 +16,13 @@
 require 'spec_helper'
 
 describe Question do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @question = Question.new(qn: "What is your name?", 
+	              correct: "Paul", option1: "Jane", option2: "Jeff", option3: "John")
+  end
+  
+  subject { @question }
+  
+  it { should have_fields(:qn, :correct, :option1, :option2, :option3) }
+  
 end

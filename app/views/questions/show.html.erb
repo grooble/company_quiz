@@ -1,12 +1,20 @@
-<h1>A form for viewing questions</h1>
+<h1>Quiz Time</h1>
 
 <p>Q: <%= @question.qn %></p>
-<p>A: <%= @question.correct %></p>
-<div class="incorrect">
-  <p>Incorrect options</p>
+<p>in answer -> options order</p>
+<div class="choices">
   <ul>
-    <li><%= @question.option1 %></li>
-    <li><%= @question.option2 %></li>
-    <li><%= @question.option3 %></li>
+    <li><a href="#"><%= @question.correct %></a></li>
+    <li><a href="#"><%= @question.option1 %></a></li>
+    <li><a href="#"><%= @question.option2 %></a></li>
+    <li><a href="#"><%= @question.option3 %></a></li>
   </ul>
+
+<p>in random order</p>  
+  <ul>
+  <% @answersarray.each do |a| %>
+    <li><%= link_to a, answer_path %></li>
+  <% end %>
+  </ul>
+
 </div>
