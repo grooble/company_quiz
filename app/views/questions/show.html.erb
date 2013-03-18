@@ -1,19 +1,12 @@
 <h1>Quiz Time</h1>
 
 <p>Q: <%= @question.qn %></p>
-<p>in answer -> options order</p>
-<div class="choices">
-  <ul>
-    <li><a href="#"><%= @question.correct %></a></li>
-    <li><a href="#"><%= @question.option1 %></a></li>
-    <li><a href="#"><%= @question.option2 %></a></li>
-    <li><a href="#"><%= @question.option3 %></a></li>
-  </ul>
 
-<p>in random order</p>  
+<div class="choices">
+  [Shuffled...]
   <ul>
-  <% @answersarray.each do |a| %>
-    <li><%= link_to a, answer_path %></li>
+  <% %w(correct option1 option2 option3).shuffle.each do |b| %>
+    <li><%= link_to @question.try(b), answer_path(:id => @question.id, :option => b) %></li>
   <% end %>
   </ul>
 

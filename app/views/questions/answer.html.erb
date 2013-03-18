@@ -1,2 +1,6 @@
 <h1>Answer</h1>
 
+<%= render :partial => "correct" if @right_answer %>
+<%= render :partial => "incorrect" if !@right_answer %>
+
+<a href="#">Try again</a>
