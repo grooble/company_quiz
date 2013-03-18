@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation 
   has_secure_password
   has_many :microposts, dependent: :destroy
+  has_many :takens, dependent: :destroy
+  has_many :questions, through: :relationships
+  # does above line need a source: attribute?
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
   has_many :reverse_relationships, 	foreign_key: 	"followed_id",
