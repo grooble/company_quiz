@@ -15,10 +15,12 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation 
   has_secure_password
-  has_many :microposts, dependent: :destroy
+  # the associating qns taken with the user
   has_many :takens, dependent: :destroy
   has_many :questions, through: :relationships
   # does above line need a source: attribute?
+  # no, bc default is sing._id = question_id which is correct value
+  has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
   has_many :reverse_relationships, 	foreign_key: 	"followed_id",
@@ -50,6 +52,17 @@ class User < ActiveRecord::Base
 
   def feed
     Micropost.from_users_followed_by(self)
+  end
+  
+  # mark a completed quiz. i.e. create a taken record.
+  def mark(took_quiz, is_correct)
+    takens.create!(question_id: took_quiz.id, correct: is_correct)
+  end
+  
+  # methods for taking questions
+  # shows all questions taken
+  def taken
+    
   end
   
   private 

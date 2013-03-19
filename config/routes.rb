@@ -13,6 +13,12 @@ SampleApp::Application.routes.draw do
   # adding this line
   resources :questions
   
+  resources :users do
+    collection do
+      get :questions
+    end
+  end
+  
   root to: 'static_pages#home'
   # adding quiz functionality
   match '/ask', to: 'questions#ask'
