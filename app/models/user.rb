@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   has_secure_password
   # the associating qns taken with the user
   has_many :takens, dependent: :destroy
-  has_many :questions, through: :relationships
+  has_many :questions, through: :takens
   # does above line need a source: attribute?
   # no, bc default is sing._id = question_id which is correct value
   has_many :microposts, dependent: :destroy

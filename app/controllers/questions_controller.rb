@@ -5,9 +5,16 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
 	#@option_value = question.try(params[:option])
   end
-  
+    
+	# select a random question from the database and display in 
+	# show.html.erb
   def ask
-  
+    max_id = Question.maximum("id")
+	min_id = Question.minimum("id")
+	id_range = max_id - min_id
+	random_id = min_id + rand(id_range).to_i
+	found = Question.where("id >= #{random_id}").first
+	@question = Question.find(found)
   end
   
   def answer

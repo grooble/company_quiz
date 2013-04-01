@@ -1,6 +1,13 @@
-<h1>Questions#ask</h1>
-<h2>This is the question</h2>
-<div class="question">
-<p></p>
+<h1>Quiz Question</h1>
+
+<p>Q: <%= @question.qn %></p>
+
+<div class="choices">
+  [Shuffled...]
+  <ul>
+  <% %w(correct option1 option2 option3).shuffle.each do |b| %>
+    <li><%= link_to @question.try(b), answer_path(:id => @question.id, :option => b) %></li>
+  <% end %>
+  </ul>
+
 </div>
-<p>Find me in app/views/questions/ask.html.erb</p>
