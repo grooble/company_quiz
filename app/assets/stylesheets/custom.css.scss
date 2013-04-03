@@ -171,8 +171,18 @@ aside {
 .user_avatars {
   overflow: auto;
   margin-top: 10px;
+  .each_avatar{
+    float:left;
+	height: 48px;
+	width: 40px;
+  }
   .gravatar {
-    margin: 1px 1px;
+    margin: 5px 2px 2px 2px;
+  }
+  .counter {
+    position: absolute;
+	font-size: 10px;
+	padding-top:38px;
   }
 }
 

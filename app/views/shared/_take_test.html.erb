@@ -1,0 +1,6 @@
+<%# TODO get a question when non exists or use existing  %>
+<%# and shift this code into a helper to make it neater. %>
+<%# Use in answer.html.erb and the home page.			 %>
+
+<% @question = Question.find(1) %>
+<%= link_to "Take a Quiz", ask_path(:id => @question.id) %>
