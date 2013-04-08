@@ -48,9 +48,11 @@ class UsersController < ApplicationController
   end
   
   def following
+    require 'will_paginate/array'
     @title = "Following"
 	@user = User.find(params[:id])
-	@users = @user.followed_users.paginate(page: params[:page])
+	#@users = @user.followed_users.paginate(page: params[:page])
+	@users = @user.users_sort_by_taken.paginate(page: params[:page])
 	render 'show_follow'
   end
   
