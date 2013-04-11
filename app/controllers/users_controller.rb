@@ -51,15 +51,29 @@ class UsersController < ApplicationController
     require 'will_paginate/array'
     @title = "Following"
 	@user = User.find(params[:id])
-	#@users = @user.followed_users.paginate(page: params[:page])
-	@users = @user.users_sort_by_taken.paginate(page: params[:page])
+	@cutoff = @user.question_ids.count
+	@users = @user.sort_following_by_taken.paginate(page: params[:page])
+	@users_under = @users.dup
+	@users_over = Array.new
+	while ((!@users_under.first.nil?) && (@users_under.first.question_ids.count > @cutoff))
+	  #temp_user = @users_under.shift
+	  @users_over.unshift(@users_under.shift)
+	end
 	render 'show_follow'
   end
   
   def followers
+    require 'will_paginate/array'
     @title = "Followers"
 	@user = User.find(params[:id])
-	@users = @user.followers.paginate(page: params[:page])
+	@cutoff = @user.question_ids.count
+	@users = @user.sort_follower_by_taken.paginate(page: params[:page])
+	@users_under = @users.dup
+	@users_over = Array.new
+	while ((!@users_under.first.nil?) && (@users_under.first.question_ids.count > @cutoff))
+	  #temp_user = @users_under.shift
+	  @users_over.unshift(@users_under.shift)
+	end
 	render 'show_follow'
   end
   

@@ -2,41 +2,40 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <% if @users.any? %>
+      <% if @users_over.any? %>
         <div class="user_avatars">
-          <% @users.each do |user| %>
+          <% @users_over.each do |user| %>
 		  <span class="each_avatar">
-		    <% if user.question_ids.count >= @user.question_ids.count  %>
-              <div><%= link_to gravatar_for(user, size: 30), user %></div>
-			  <div class="counter">
-			    <%= user.question_ids.count if user.question_ids.count!=0 %>
-			  </div>
-			<% end %>
+            <div><%= link_to gravatar_for(user, size: 30), user %></div>
+			<div class="counter">
+			  <%= user.question_ids.count if user.question_ids.count!=0 %>
+			</div>
 		  </span>
           <% end %>
         </div>
       <% end %>
+	  <% if !@users_over.any? %>
+	    no users_over
+	  <% end %>
     </section>
 	
 	<section>
       <%= gravatar_for @user %>
-      <h1><%= @user.name %></h1>
+      <h1><%= @user.name %></h1><%= @user.id %>
       <span><%= link_to "view my profile", @user %></span>
       <span><b>Microposts:</b> <%= @user.microposts.count %></span>
       <%= render 'shared/stats' %>
     </section>
 	
-    <section>
-      <% if @users.any? %>
+    <section>	
+      <% if @users_under.any? %>
         <div class="user_avatars">
-          <% @users.each do |user| %>
+          <% @users_under.each do |user| %>
 		  <span class="each_avatar">
-		    <% if user.question_ids.count < @user.question_ids.count  %>
-              <div><%= link_to gravatar_for(user, size: 30), user %></div>
-			  <div class="counter">
-			    <%= user.question_ids.count if user.question_ids.count!=0 %>
-			  </div>
-			<% end %>
+		    <div><%= link_to gravatar_for(user, size: 30), user %></div>
+			<div class="counter">
+			  <%= user.question_ids.count if user.question_ids.count!=0 %>
+			</div>
 		  </span>
           <% end %>
         </div>
@@ -51,6 +50,11 @@
         <%= render @users %>
       </ul>
       <%= will_paginate %>
-	  <% end %>
+	<% end %>
+	Users over: <% @users_over.each do |over| %>
+	  <%= over.id %>,
+	<% end %>
+	Cutoff: <%= @cutoff %>
+	Whiled: <%= @whiled %>
   </div>
 </div>

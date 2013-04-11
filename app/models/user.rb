@@ -67,15 +67,40 @@ class User < ActiveRecord::Base
     
   end
   
-  def users_sort_by_taken
+  def sort_following_by_taken
     this_user = @current_user
-	User.find_by_sql("SELECT users.*
-					FROM users 
-					INNER JOIN takens
-					ON users.id = takens.user_id
-					WHERE users.id != (#{id})
-					GROUP BY users.id 
-					ORDER BY count(takens.user_id) DESC")
+	User.find_by_sql(
+                    "SELECT fo_ed.*
+                    FROM 
+                      (
+                      SELECT users.* from users
+                      INNER JOIN relationships
+                      ON users.id = followed_id
+                      WHERE follower_id = (#{id})
+                      ) fo_ed
+                    LEFT JOIN takens
+                    ON fo_ed.id = takens.user_id
+                    GROUP BY fo_ed.id
+                    ORDER BY count(takens.user_id) DESC"
+					)
+  end
+  
+  def sort_follower_by_taken
+  this_user = @current_user
+  User.find_by_sql(
+                    "SELECT fo_ed.*
+                    FROM 
+                      (
+                      SELECT users.* from users
+                      INNER JOIN relationships
+                      ON users.id = follower_id
+                      WHERE followed_id = (#{id})
+                      ) fo_ed
+                    LEFT JOIN takens
+                    ON fo_ed.id = takens.user_id
+                    GROUP BY fo_ed.id
+                    ORDER BY count(takens.user_id) DESC"
+					)
   end
 	  
 	  
