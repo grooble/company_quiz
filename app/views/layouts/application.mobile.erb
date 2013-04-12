@@ -9,10 +9,8 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div data-role="header">
-	  <%= render 'layouts/header' %>
-    </div>
     <div data-role="page">
+      <%= render 'layouts/header' %>
       <%= yield %>
     </div>
 	<div data-role="footer">

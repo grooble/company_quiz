@@ -1,0 +1,29 @@
+<% if signed_in? %>
+    <div data-role="content">
+    	<%= render 'shared/user_info' %>
+	</div>
+
+    <div data-role="content">
+        <%= render 'shared/stats' %>
+	</div>
+
+    <div data-role="content">
+        <%= render 'shared/micropost_form' %>
+	</div>
+
+    <div data-role="content">
+	    <%= render 'shared/take_test' %>
+	</div>
+
+<% else %>
+  <h1>Welcome to the Yanmar Quiz</h1>
+
+  <h2>
+    <div data-role="link">
+	  This is the home page for the
+      <a href="https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts">Yanmar Quiz</a>.
+	</div>
+  </h2>
+
+  <%= link_to image_tag("yanmar.jpg", alt: "Yanmar"), 'http://www.yanmar.com/en/' %>
+<% end %>

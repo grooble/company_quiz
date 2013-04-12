@@ -201,7 +201,7 @@ DEPENDENCIES
   jquery-rails (= 2.0.2)
   jquery_mobile_rails
   mobylette
-  pg (= 0.12.2)
+  pg
   rails (= 3.2.11)
   rb-fchange (= 0.0.5)
   rb-notifu (= 0.0.4)
