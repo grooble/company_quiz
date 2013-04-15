@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
 									dependent: 		:destroy
   has_many :followers, through: :reverse_relationships, source: :follower
   
+  
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
   
@@ -37,6 +38,7 @@ class User < ActiveRecord::Base
 					uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  
   
   def following?(other_user)
 	relationships.find_by_followed_id(other_user.id)
@@ -65,9 +67,48 @@ class User < ActiveRecord::Base
     
   end
   
+  def sort_following_by_taken
+    this_user = @current_user
+	User.find_by_sql(
+                    "SELECT fo_ed.*
+                    FROM 
+                      (
+                      SELECT users.* from users
+                      INNER JOIN relationships
+                      ON users.id = followed_id
+                      WHERE follower_id = (#{id})
+                      ) fo_ed
+                    LEFT JOIN takens
+                    ON fo_ed.id = takens.user_id
+                    GROUP BY fo_ed.id
+                    ORDER BY count(takens.user_id) DESC"
+					)
+  end
+  
+  def sort_follower_by_taken
+  this_user = @current_user
+  User.find_by_sql(
+                    "SELECT fo_ed.*
+                    FROM 
+                      (
+                      SELECT users.* from users
+                      INNER JOIN relationships
+                      ON users.id = follower_id
+                      WHERE followed_id = (#{id})
+                      ) fo_ed
+                    LEFT JOIN takens
+                    ON fo_ed.id = takens.user_id
+                    GROUP BY fo_ed.id
+                    ORDER BY count(takens.user_id) DESC"
+					)
+  end
+	  
+	  
   private 
   
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
+	
+
 end
