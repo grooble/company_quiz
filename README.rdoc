@@ -14,7 +14,6 @@ app from the Hartl Rails Tutorial
 4. Shows how many tests you've taken as well as the 
 number taken by your followers and "followeds"
 
-
 == To do
 
 Order followers/followeds by test taken rank

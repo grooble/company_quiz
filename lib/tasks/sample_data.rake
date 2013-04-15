@@ -40,3 +40,15 @@ def make_relationships
   followed_users.each { |followed| user.follow!(followed) }
   followers.each      { |follower| follower.follow!(user) }
 end
+
+def make_takens
+  users = User.all
+  users.each do |taker| 
+    tests_taken = rand(1..99)
+	for i in 1..tests_taken
+	  test_num = rand(1..25)
+	  correct = [true, false].sample
+	  taker.mark(test_num, correct)
+	end
+  end
+end
