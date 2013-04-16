@@ -1,58 +1,36 @@
 <% provide(:title, @title) %>
-<div class="row">
-  <aside class="span4">
-    <section>
       <% if @users_over.any? %>
-        <div class="user_avatars">
           <% @users_over.each do |user| %>
-		  <span class="each_avatar">
             <div><%= link_to gravatar_for(user, size: 30), user %></div>
-			<div class="counter">
 			  <%= user.question_ids.count if user.question_ids.count!=0 %>
-			</div>
-		  </span>
           <% end %>
-        </div>
       <% end %>
 	  <% if !@users_over.any? %>
 	    no users_over
 	  <% end %>
-    </section>
-	
-	<section>
       <%= gravatar_for @user %>
-      <h1><%= @user.name %></h1><%= @user.id %>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
+      <h1><%= @user.name %></h1>show_follow<%= @user.id %>
+      <%= link_to "view my profile", @user %>
+      <b>Microposts:</b> <%= @user.microposts.count %>
       <%= render 'shared/stats' %>
-    </section>
-	
-    <section>	
       <% if @users_under.any? %>
-        <div class="user_avatars">
           <% @users_under.each do |user| %>
-		  <span class="each_avatar">
 		    <div><%= link_to gravatar_for(user, size: 30), user %></div>
-			<div class="counter">
 			  <%= user.question_ids.count if user.question_ids.count!=0 %>
-			</div>
-		  </span>
           <% end %>
-        </div>
       <% end %>
-    </section>
 	
-  </aside>
-  <div class="span8">
     <h3><%= @title %></h3>
     <% if @users.any? %>
       <ul class="users">
         <%= render @users %>
       </ul>
-      <%= will_paginate %>
+      <%= will_paginate @users, 
+	    renderer: WillPaginate::ActionView::JqueryMobilePaginateLinkRenderer,
+		previous_label: 'Prev',
+		next_label: 'Next'
+		%>
 	<% end %>
 	Users over: <% @users_over.each do |over| %>
 	  <%= over.id %>,
 	<% end %>
-  </div>
-</div>

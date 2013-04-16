@@ -1,22 +1,9 @@
 <div data-role="header">
-	<div data-role="link">
-	  <%= link_to "yanmar quiz", root_path, id: "logo" %>
-	</div>
-	<div data-role="button">
 	  <%= link_to "Home",    root_path %>
-    </div>
-	<div data-role="button">
-	  <%= link_to "Help",    help_path %>
-	</div>
+	  <h2>Yanmar Quiz mobile</h2>
   <% if signed_in? %>
-    <%= link_to "Users", users_path %>
-      <a href="#">
-        Account <b class="caret"></b>
-      </a>
-      <%= link_to "Profile", current_user %>
-      <%= link_to "Settings", edit_user_path(current_user) %>
-      
-      <%= link_to "Sign out", signout_path, method: "delete" %>
+	<% @question = Question.find(1) %>
+    <%= link_to "Quiz", ask_path(:id => @question.id) %>
   <% else %>
     <%= link_to "Sign in", signin_path %>
   <% end %>

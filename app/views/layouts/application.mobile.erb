@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %> Mobile!</title>
+    <title>Mobile! <%= full_title(yield(:title)) %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "jquery.mobile.min" %>
@@ -10,10 +10,7 @@
   </head>
   <body>
     <div data-role="page">
-      <%= render 'layouts/header' %>
       <%= yield %>
     </div>
-	<div data-role="footer">
-	</div>
   </body>
 </html>

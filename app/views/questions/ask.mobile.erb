@@ -1,0 +1,31 @@
+<% if signed_in? %>
+  <div data-role="header">
+  	<%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+	<h2>Yanmar Quiz mobile</h2>
+    <% @question = Question.find(1) %>
+    <%= link_to "Quiz", ask_path(:id => @question.id) %>
+  </div>
+  <% else %>
+  <div data-role="header">
+  	<%= link_to "Home",    root_path %>
+	<h2>Yanmar Quiz mobile</h2>
+    <%= link_to "Sign in", signin_path %>
+  </div>
+<% end %>
+
+<h2>Quiz Qn - mobile</h2>
+    <%= @question.qn %>
+
+<div data-role="controlgroup">
+  <% %w(correct option1 option2 option3).shuffle.each do |b| %>
+  <div data-role="button">
+    <%= link_to @question.try(b), answer_path(:id => @question.id, :option => b) %>
+  </div>
+  <% end %>
+</div>
+  
+<div data-role="footer">
+  <%= link_to "Hint", "#", "data-role" => "button" %>
+  <%= link_to "About",   about_path %>
+  <%= link_to "Create", "#", "data-role" => "button" %>
+</div>
