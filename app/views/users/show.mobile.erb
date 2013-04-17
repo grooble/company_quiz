@@ -19,8 +19,7 @@
 <% if @user.microposts.any? %>
 <div data-role="collapsible">
   <h3>Show Microposts (<%= @user.microposts.count %>)</h3>
-  <ul data-role="content">
-    <%= render @microposts %>
+  <ul data-role="listview">
     <%= render @microposts %>
   </ul>
   <%= will_paginate @microposts, 
@@ -31,8 +30,6 @@
 </div>
   
 <% end %>
-
-<%= @user.name %>, <%= @user.email %>
 
 <div data-role="footer">
 </div>

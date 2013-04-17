@@ -1,28 +1,24 @@
 <% provide(:title, @title) %>
-      <% if @users_over.any? %>
-          <% @users_over.each do |user| %>
-            <div><%= link_to gravatar_for(user, size: 30), user %></div>
-			  <%= user.question_ids.count if user.question_ids.count!=0 %>
-          <% end %>
-      <% end %>
-	  <% if !@users_over.any? %>
-	    no users_over
-	  <% end %>
-      <%= gravatar_for @user %>
-      <h1><%= @user.name %></h1>show_follow<%= @user.id %>
-      <%= link_to "view my profile", @user %>
-      <b>Microposts:</b> <%= @user.microposts.count %>
-      <%= render 'shared/stats' %>
-      <% if @users_under.any? %>
-          <% @users_under.each do |user| %>
-		    <div><%= link_to gravatar_for(user, size: 30), user %></div>
-			  <%= user.question_ids.count if user.question_ids.count!=0 %>
-          <% end %>
-      <% end %>
+  <div data-role="header">
+  	<%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+	<h2>Yanmar Quiz mobile</h2>
+    <% @question = Question.find(1) %>
+    <%= link_to "Quiz", ask_path(:id => @question.id) %>
+  </div>
+  
+  <div class="ui-grid-a">
+    <div class="ui-block-a"><%= gravatar_for @user %></div>
+	<div class="ui-block-b"><h1><%= link_to @user.name, @user %></h1></div>
+  </div>
+      
+      
+  <b>Microposts:</b> <%= @user.microposts.count %>
+  <%= render 'shared/stats' %>
 	
-    <h3><%= @title %></h3>
     <% if @users.any? %>
-      <ul class="users">
+    <div data-role="collapsible">
+      <h3><%= @title %></h3>
+      <ul data-role="listview">
         <%= render @users %>
       </ul>
       <%= will_paginate @users, 
@@ -30,7 +26,13 @@
 		previous_label: 'Prev',
 		next_label: 'Next'
 		%>
+	</div>
 	<% end %>
-	Users over: <% @users_over.each do |over| %>
-	  <%= over.id %>,
-	<% end %>
+	
+  <div data-role="footer">
+    <div class="ui-grid-b">
+      <div class="ui-block-a"><%= link_to "Following",   about_path, "data-role" => "button" %></div>
+      <div class="ui-block-b"><%= link_to "News Feed", "http://www.yanmar.co.jp/en/news/index.html", :confirm=> "Leave this page?", "data-role" => "button" %></div>
+      <div class="ui-block-c"><%= link_to "Followers", contact_path, "data-role" => "button" %></div>
+	</div>
+  </div>
