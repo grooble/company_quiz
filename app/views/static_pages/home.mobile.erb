@@ -3,7 +3,7 @@
   	<%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
 	<h2>Yanmar Quiz mobile</h2>
     <% @question = Question.find(1) %>
-    <%= link_to "Quiz", ask_path(:id => @question.id) %>
+    <%= link_to "Quiz", ask_path(:id => @question.id, "rel" => "external") %>
   </div>
     <div data-role="content">
     	<%= render 'shared/user_info' %>
