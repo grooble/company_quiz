@@ -1,10 +1,6 @@
 <script type="text/javascript">
-$("div.ui-grid-a").click(function() { 
-   setTimeout(function(){
-		$('#my_list').trigger('expand');
-		$('[aria-hidden="true"]').show().attr("aria-hidden", "false");
-		alert("dodido");
-   }, 1000);
+$('#clicker').click(function() { 
+		alert("dodido")
  });
 </script>
 
@@ -21,6 +17,7 @@ $("div.ui-grid-a").click(function() {
     <%= gravatar_for @user %>
     <%= @user.name %>
   </h1>
+  <a href="#" data-role="button" id="clicker">expando</a>
 </div>
 
 <%= render 'shared/stats' %>
