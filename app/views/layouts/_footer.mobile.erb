@@ -1,0 +1,9 @@
+<div data-role="footer">
+  <% if signed_in? %>
+    
+  <% else %>
+    <%= link_to "About",   about_path %>
+    <%= link_to "Yanmar News", "http://www.yanmar.co.jp/en/news/index.html", :confirm=> "Leave this page?" %>
+    <%= link_to "Contact", contact_path %>
+  <% end %>
+</div>

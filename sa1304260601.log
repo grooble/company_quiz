@@ -1,0 +1,102 @@
+2013-04-25T01:40:26.922519+00:00 heroku[web.1]: State changed from starting to up
+2013-04-25T01:40:29.283919+00:00 app[web.1]: Started GET "/" for 210.159.102.145 at 2013-04-25 01:40:29 +0000
+2013-04-25T01:40:29.485265+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-04-25T01:40:30.234605+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (46.9ms)
+2013-04-25T01:40:30.444681+00:00 app[web.1]:   Rendered shared/_stats.html.erb (207.7ms)
+2013-04-25T01:40:30.459728+00:00 app[web.1]:   Rendered shared/_take_test.html.erb (10.0ms)
+2013-04-25T01:40:30.448224+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.5ms)
+2013-04-25T01:40:30.449040+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (3.7ms)
+2013-04-25T01:40:30.585296+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (422.8ms)
+2013-04-25T01:40:30.588136+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.2ms)
+2013-04-25T01:40:30.591442+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.7ms)
+2013-04-25T01:40:30.593721+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.9ms)
+2013-04-25T01:40:30.594109+00:00 app[web.1]: Completed 200 OK in 1109ms (Views: 433.4ms | ActiveRecord: 397.7ms)
+2013-04-25T01:40:30.582017+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (100.1ms)
+2013-04-25T01:40:30.584996+00:00 app[web.1]:   Rendered shared/_feed.html.erb (122.6ms)
+2013-04-25T01:40:30.600996+00:00 heroku[router]: at=info method=GET path=/ host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=0ms service=1334ms status=200 bytes=16371
+2013-04-25T01:40:31.612373+00:00 heroku[router]: at=info method=GET path=/assets/application-e40ced72cc6173c51302dbb294d36324.js host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=1ms service=8ms status=304 bytes=0
+2013-04-25T01:40:38.408657+00:00 heroku[router]: at=info method=GET path=/assets/application-e9f6bb2e363c51b5e4e752d4148385db.css host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=0ms service=4ms status=304 bytes=0
+2013-04-25T01:40:40.361195+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=1ms service=10ms status=304 bytes=0
+2013-04-25T01:40:41.884777+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-04-25T01:40:41.871704+00:00 app[web.1]: Started GET "/" for 210.159.102.145 at 2013-04-25 01:40:41 +0000
+2013-04-25T01:40:41.920243+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (15.9ms)
+2013-04-25T01:40:41.948184+00:00 app[web.1]:   Rendered shared/_stats.html.erb (27.6ms)
+2013-04-25T01:40:41.951777+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.1ms)
+2013-04-25T01:40:41.955179+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (6.7ms)
+2013-04-25T01:40:41.963238+00:00 app[web.1]:   Rendered shared/_take_test.html.erb (7.3ms)
+2013-04-25T01:40:42.259651+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (277.4ms)
+2013-04-25T01:40:42.264223+00:00 app[web.1]:   Rendered shared/_feed.html.erb (300.6ms)
+2013-04-25T01:40:42.264223+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (360.4ms)
+2013-04-25T01:40:42.268802+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.4ms)
+2013-04-25T01:40:42.271975+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.4ms)
+2013-04-25T01:40:42.273690+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.6ms)
+2013-04-25T01:40:42.274185+00:00 app[web.1]: Completed 200 OK in 389ms (Views: 325.8ms | ActiveRecord: 52.9ms)
+2013-04-25T01:40:42.293260+00:00 heroku[router]: at=info method=GET path=/ host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=0ms service=427ms status=304 bytes=0
+2013-04-25T01:40:54.801703+00:00 app[web.1]: Started GET "/ask?id=1" for 210.159.102.145 at 2013-04-25 01:40:54 +0000
+2013-04-25T01:40:54.808254+00:00 app[web.1]: Processing by QuestionsController#ask as HTML
+2013-04-25T01:40:54.810723+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2013-04-25T01:40:54.878292+00:00 app[web.1]:   Rendered questions/ask.html.erb within layouts/application (1.9ms)
+2013-04-25T01:40:54.885939+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-04-25T01:40:54.895196+00:00 app[web.1]:   Rendered layouts/_header.html.erb (6.7ms)
+2013-04-25T01:40:54.896246+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.5ms)
+2013-04-25T01:40:54.898231+00:00 app[web.1]: Completed 200 OK in 87ms (Views: 25.6ms | ActiveRecord: 53.7ms)
+2013-04-25T01:40:54.900271+00:00 heroku[router]: at=info method=GET path=/ask?id=1 host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=1ms service=110ms status=200 bytes=2327
+2013-04-25T01:40:57.986344+00:00 app[web.1]:   Parameters: {"id"=>"16", "option"=>"option1"}
+2013-04-25T01:40:57.980482+00:00 app[web.1]: Started GET "/answer?id=16&option=option1" for 210.159.102.145 at 2013-04-25 01:40:57 +0000
+2013-04-25T01:40:57.985578+00:00 app[web.1]: Processing by QuestionsController#answer as HTML
+2013-04-25T01:40:58.059308+00:00 app[web.1]:   Rendered questions/_incorrect.html.erb (0.3ms)
+2013-04-25T01:40:58.059822+00:00 app[web.1]:   Rendered questions/answer.html.erb within layouts/application (2.0ms)
+2013-04-25T01:40:58.064320+00:00 app[web.1]: Completed 200 OK in 78ms (Views: 9.2ms | ActiveRecord: 55.4ms)
+2013-04-25T01:40:58.060946+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-04-25T01:40:58.063586+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.5ms)
+2013-04-25T01:40:58.064087+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2013-04-25T01:40:58.068633+00:00 heroku[router]: at=info method=GET path=/answer?id=16&option=option1 host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=1ms service=92ms status=200 bytes=2099
+2013-04-25T01:41:00.982645+00:00 app[web.1]: Started GET "/" for 210.159.102.145 at 2013-04-25 01:41:00 +0000
+2013-04-25T01:41:00.986389+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-04-25T01:41:01.021847+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (9.2ms)
+2013-04-25T01:41:01.045604+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.0ms)
+2013-04-25T01:41:01.047832+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (3.9ms)
+2013-04-25T01:41:01.042606+00:00 app[web.1]:   Rendered shared/_stats.html.erb (20.4ms)
+2013-04-25T01:41:01.057700+00:00 app[web.1]:   Rendered shared/_take_test.html.erb (8.1ms)
+2013-04-25T01:41:01.203044+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (128.9ms)
+2013-04-25T01:41:01.206873+00:00 app[web.1]:   Rendered shared/_feed.html.erb (148.7ms)
+2013-04-25T01:41:01.207137+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (194.8ms)
+2013-04-25T01:41:01.208905+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-04-25T01:41:01.216720+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2013-04-25T01:41:01.215932+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.6ms)
+2013-04-25T01:41:01.217148+00:00 app[web.1]: Completed 200 OK in 226ms (Views: 177.0ms | ActiveRecord: 45.2ms)
+2013-04-25T01:41:01.226847+00:00 heroku[router]: at=info method=GET path=/ host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=1ms service=242ms status=200 bytes=16371
+2013-04-25T01:41:04.458972+00:00 app[web.1]: Started GET "/users/101/following" for 210.159.102.145 at 2013-04-25 01:41:04 +0000
+2013-04-25T01:41:04.464812+00:00 app[web.1]:   Parameters: {"id"=>"101"}
+2013-04-25T01:41:04.464812+00:00 app[web.1]: Processing by UsersController#following as HTML
+2013-04-25T01:41:04.506527+00:00 app[web.1]: Completed 500 Internal Server Error in 42ms
+2013-04-25T01:41:04.508097+00:00 app[web.1]: LINE 1
+: SELECT fo_ed.*
+2013-04-25T01:41:04.508389+00:00 app[web.1]:                     ON fo_ed.id = takens.user_id
+2013-04-25T01:41:04.508389+00:00 app[web.1]:   app/controllers/users_controller.rb:55:in `following'
+2013-04-25T01:41:04.508389+00:00 app[web.1]: 
+2013-04-25T01:41:04.508389+00:00 app[web.1]: 
+2013-04-25T01:41:04.508097+00:00 app[web.1]: 
+2013-04-25T01:41:04.508097+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  column "fo_ed.name" must appear in the GROUP BY clause or be used in an aggregate function
+2013-04-25T01:41:04.508097+00:00 app[web.1]:                ^
+2013-04-25T01:41:04.508097+00:00 app[web.1]:                       SELECT users.* from users
+2013-04-25T01:41:04.508097+00:00 app[web.1]:                       ON users.id = followed_id
+2013-04-25T01:41:04.508389+00:00 app[web.1]:                       ) fo_ed
+2013-04-25T01:41:04.508389+00:00 app[web.1]:                       WHERE follower_id = (101)
+2013-04-25T01:41:04.508389+00:00 app[web.1]:                     LEFT JOIN takens
+2013-04-25T01:41:04.508389+00:00 app[web.1]:                     GROUP BY fo_ed.id
+2013-04-25T01:41:04.508097+00:00 app[web.1]:                       (
+2013-04-25T01:41:04.508097+00:00 app[web.1]:                     FROM 
+2013-04-25T01:41:04.508097+00:00 app[web.1]:                       INNER JOIN relationships
+2013-04-25T01:41:04.508389+00:00 app[web.1]:                     ORDER BY count(takens.user_id) DESC):
+2013-04-25T01:41:04.508097+00:00 app[web.1]: : SELECT fo_ed.*
+2013-04-25T01:41:04.508389+00:00 app[web.1]:   app/models/user.rb:72:in `sort_following_by_taken'
+2013-04-25T01:41:04.530597+00:00 heroku[router]: at=info method=GET path=/users/101/following host=young-wildwood-7107.herokuapp.com fwd="192.168.255.64, 210.159.102.145" dyno=web.1 connect=2ms service=56ms status=500 bytes=643
+2013-04-25T02:43:45.988887+00:00 heroku[web.1]: Idling
+2013-04-25T02:43:49.178437+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2013-04-25T02:43:50.326609+00:00 app[web.1]: [2013-04-25 02:43:50] ERROR SignalException: SIGTERM
+2013-04-25T02:43:50.326609+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2013-04-25T02:43:59.064185+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2013-04-25T02:43:59.064185+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2013-04-25T02:44:00.777126+00:00 heroku[web.1]: Process exited with status 137
+2013-04-25T02:44:00.788975+00:00 heroku[web.1]: State changed from up to down

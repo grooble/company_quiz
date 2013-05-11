@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %> Mobile!</title>
+    <title>Mobile! <%= full_title(yield(:title)) %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "jquery.mobile.min" %>
+    <%= javascript_include_tag "jquery.mobile.min.js" %>
     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div data-role="header">
-	  <%= render 'layouts/header' %>
-    </div>
-    <div data-role="page">
+    <div data-role="page" id="page-div">
       <%= yield %>
     </div>
-	<div data-role="footer">
-	</div>
   </body>
 </html>

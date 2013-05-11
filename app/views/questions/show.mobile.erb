@@ -1,0 +1,13 @@
+<h1>Quiz - mobile</h1>
+
+<div data-role="content">
+  Q: <%= @question.qn %>
+</div>
+
+<div data-role="content">
+  <ul>
+    <% %w(correct option1 option2 option3).shuffle.each do |b| %>
+      <li><%= link_to @question.try(b), answer_path(:id => @question.id, :option => b) %></li>
+    <% end %>
+  </ul>
+</div>

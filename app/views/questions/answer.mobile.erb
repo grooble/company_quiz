@@ -1,0 +1,20 @@
+<div data-role="header">
+  <%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+  <h2>Yanmar Quiz mobile</h2>
+  <% @question = Question.find(1) %>
+  <%= link_to "Quiz", ask_path(:id => @question.id) %>
+</div>
+<h2>Answer</h2>
+
+  <%= render :partial => "correct" if @right_answer %>
+  <%= render :partial => "incorrect" if !@right_answer %>
+
+<%= link_to "Try again", ask_path(:id => @question.id), "data-role" => "button", "data-inline" => "true" %>
+
+<div data-role="footer">
+  <div data-role="controlgroup" data-type="horizontal">
+    <%= link_to "Create", "#", "data-role" => "button" %>
+    <%= link_to "Contact", contact_path, "data-role" => "button" %>
+    <%= link_to "About",   about_path, "data-role" => "button" %>
+  </div>
+</div>

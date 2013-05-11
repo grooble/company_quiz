@@ -1,0 +1,23 @@
+  <div data-role="header">
+  	<%= link_to "Home",    root_path %>
+	<h2>Yanmar Quiz mobile</h2>
+    <%= link_to "Sign in", signin_path %>
+  </div><% provide(:title, "Sign in") %>
+<h1>Mobile sign in</h1>
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+<% end %>
+
+New user? <%= link_to "Sign up now!", signup_path %></p>
+<div data-role="footer">
+  <%= link_to "About",   about_path %>
+  <%= link_to "Yanmar News", "http://www.yanmar.co.jp/en/news/index.html", :confirm=> "Leave this page?" %>
+  <%= link_to "Contact", contact_path %>
+</div>

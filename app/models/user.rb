@@ -70,7 +70,7 @@ class User < ActiveRecord::Base
   def sort_following_by_taken
     this_user = @current_user
 	User.find_by_sql(
-                    "SELECT fo_ed.*
+                    "SELECT fo_ed.id, fo_ed.name, fo_ed.email
                     FROM 
                       (
                       SELECT users.* from users
@@ -80,7 +80,7 @@ class User < ActiveRecord::Base
                       ) fo_ed
                     LEFT JOIN takens
                     ON fo_ed.id = takens.user_id
-                    GROUP BY fo_ed.id
+                    GROUP BY fo_ed.id, fo_ed.name, fo_ed.email
                     ORDER BY count(takens.user_id) DESC"
 					)
   end
@@ -88,7 +88,7 @@ class User < ActiveRecord::Base
   def sort_follower_by_taken
   this_user = @current_user
   User.find_by_sql(
-                    "SELECT fo_ed.*
+                    "SELECT fo_ed.id, fo_ed.name, fo_ed.email
                     FROM 
                       (
                       SELECT users.* from users
@@ -98,7 +98,7 @@ class User < ActiveRecord::Base
                       ) fo_ed
                     LEFT JOIN takens
                     ON fo_ed.id = takens.user_id
-                    GROUP BY fo_ed.id
+                    GROUP BY fo_ed.id, fo_ed.name, fo_ed.email
                     ORDER BY count(takens.user_id) DESC"
 					)
   end

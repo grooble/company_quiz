@@ -1,0 +1,43 @@
+<script type="text/javascript">
+$('#clicker').click(function() { 
+		alert("dodido")
+ });
+</script>
+
+<% provide(:title, @user.name) %>
+<div data-role="header" id="title-div">
+  <%= link_to "Home", root_path, "data-role" => "button", "data-icon" => "home", "data-iconpos" => "notext" %>
+  <h2 id="h2-id">Yanmar Quiz mobile</h2>
+  <% @question = Question.find(1) %>
+  <%= link_to "Quiz", ask_path(:id => @question.id), "data-role" => "button", "data-icon" => "star" %>
+</div>
+
+<div data-role="content" id="grav-div">
+  <h1>
+    <%= gravatar_for @user %>
+    <%= @user.name %>
+  </h1>
+  <a href="#" data-role="button" id="clicker">expando</a>
+</div>
+
+<%= render 'shared/stats' %>
+
+<%= render 'follow_form' if signed_in? %>
+<% if @user.microposts.any? %>
+<div data-role="collapsible" id="my_list">
+  <h3>Show Microposts (<%= @user.microposts.count %>)</h3>
+  <ul data-role="listview" >
+    <%= render @microposts %>
+  </ul>
+  <%= will_paginate @microposts, 
+	    renderer: WillPaginate::ActionView::JqueryMobilePaginateLinkRenderer,
+		id: 'mobile_pagination',
+		previous_label: 'Prev',
+		next_label: 'Next'
+		%>
+</div>
+  
+<% end %>
+
+<div data-role="footer" id="footer-div">
+</div>

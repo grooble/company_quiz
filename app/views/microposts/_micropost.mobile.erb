@@ -1,0 +1,16 @@
+<li>
+  <div class="ui-grid-b">
+    <div class="ui-block-a" style="width:70%"><%= micropost.content %></div>
+    <div class="ui-block-b" style="width:15%"><%= time_ago_in_words(micropost.created_at) %> ago.</div>
+    <div class="ui-block-c" style="width:15%">
+	<% if current_user?(micropost.user) %>
+      <%= link_to "del", micropost, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: micropost.content, 
+									 "data-role" => "button" %>
+    <% else %>
+      &nbsp;
+    <% end %>	
+	</div>
+  </div>
+</li>
