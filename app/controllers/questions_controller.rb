@@ -56,7 +56,7 @@ class QuestionsController < ApplicationController
 	if @pended.save
 	  @user = current_user
 	  flash[:success] = 'Question successfully approved!'
-	  redirect_to @user
+	  redirect_to :back
 	else
 	  flash.now[:error] = 'There was an error updating your question. Try again.'
 	  redirect_to @user
