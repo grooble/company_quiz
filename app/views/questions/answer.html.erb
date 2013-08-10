@@ -3,4 +3,5 @@
 <%= render :partial => "correct" if @right_answer %>
 <%= render :partial => "incorrect" if !@right_answer %>
 
-<%= link_to "Try again", ask_path(:id => @question.id) %>
+<%= link_to "Try again", ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
+<%= link_to "Make Question", make_path %>

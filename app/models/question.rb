@@ -14,5 +14,12 @@
 #
 
 class Question < ActiveRecord::Base
-  attr_accessible :category, :correct, :option1, :option2, :option3, :qn
+
+  validates :qn, presence: true, length: { minimum: 12 }
+  validates :correct, presence: true
+  validates :option1, presence: true
+  validates :option2, presence: true
+  validates :option3, presence: true
+
+  attr_accessible :category, :correct, :option1, :option2, :option3, :qn, :approved
 end

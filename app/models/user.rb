@@ -55,13 +55,15 @@ class User < ActiveRecord::Base
   def feed
     Micropost.from_users_followed_by(self)
   end
+
+  # --------------------------------------
+  # methods for taking questions
   
   # mark a completed quiz. i.e. create a taken record.
   def mark(took_quiz, is_correct)
     takens.create!(question_id: took_quiz.id, correct: is_correct)
   end
   
-  # methods for taking questions
   # shows all questions taken
   def taken
     

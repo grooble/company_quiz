@@ -1,0 +1,24 @@
+<h1>Make Question</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  <%= form_for(@question) do |q| %>
+    <%= q.label :qn %>
+	<%= q.text_field :qn %>
+	
+	<%= q.label :correct %>
+	<%= q.text_field :correct %>
+	
+	<%= q.label :option1 %>
+	<%= q.text_field :option1 %>
+	
+	<%= q.label :option2 %>
+	<%= q.text_field :option2 %>
+	
+	<%= q.label :option3 %>
+	<%= q.text_field :option3 %>
+	
+	<%= q.submit %>
+  <% end %>
+  </div>
+</div>

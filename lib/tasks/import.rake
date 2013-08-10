@@ -11,7 +11,8 @@ task :import => [:environment] do
       :correct => row[1],
 	  :option1 => row[2],
 	  :option2 => row[3],
-	  :option3 => row[4])
+	  :option3 => row[4],
+	  :approved => true)
   end
 
 end

@@ -1,0 +1,15 @@
+<h1>Approve Questions</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  <table>
+    <% @pended.each do |p| %>
+    <tr>
+      <td><%= p.id %>: <%= p.qn %></td>
+	  <td><%= link_to 'Approve', approve_path(:qid => p.id) %></td>
+      <td><%= link_to 'Delete', p, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+  </div>
+</div>

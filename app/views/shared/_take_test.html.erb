@@ -3,5 +3,9 @@
 <%# Use in answer.html.erb and the home page.			 %>
 
 
-<% @question = Question.find(1) %>
+<% @question = Question.last() %>
 <%= link_to "Take a Quiz", ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
+<%= link_to "Make Question", make_path, class: "btn btn-large btn-primary" %>
+<% if current_user.admin? %>
+  <%= link_to "Check Pending", pending_path, class: "btn btn-large btn-primary" %>
+<% end %>

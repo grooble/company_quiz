@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   
-  get "questions/ask"
+  get '/pending', to: 'questions#pending'
+  get '/ask', to: 'questions#ask'
 
   resources :users do
     member do
@@ -10,7 +11,6 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  # adding this line
   resources :questions
   
   resources :users do
@@ -21,9 +21,10 @@ SampleApp::Application.routes.draw do
   
   root to: 'static_pages#home'
   # adding quiz functionality
-  match '/ask', to: 'questions#ask'
   match '/answer', to: 'questions#answer'
-  # for quiz
+  match '/make', to: 'questions#new'
+  match '/approve', to: 'questions#approve'
+
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
