@@ -27,11 +27,13 @@ class QuestionsController < ApplicationController
 	# select a random question from the database and display in 
 	# show.html.erb
   def ask
-    max_id = Question.maximum("id")
-	min_id = Question.minimum("id")
-	id_range = max_id - min_id
-	random_id = min_id + rand(id_range).to_i
-	found = Question.where("id >= #{random_id}").first
+    #max_id = Question.maximum("id")
+	#min_id = Question.minimum("id")
+	#id_range = max_id - min_id
+	#random_id = min_id + rand(id_range).to_i
+	approveds = Question.where("approved == ?", true)
+	found = approveds.first(:order => "RANDOM()")
+	#found = Question.where("id >= #{random_id}" && "approved == ?", true).first
 	@question = Question.find(found)
   end
   
