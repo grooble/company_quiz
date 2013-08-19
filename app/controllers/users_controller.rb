@@ -48,6 +48,7 @@ class UsersController < ApplicationController
   end
   
   def following
+=begin
     require 'will_paginate/array'
     @title = "Following"
 	@user = User.find(params[:id])
@@ -60,9 +61,15 @@ class UsersController < ApplicationController
 	  @users_over.unshift(@users_under.shift)
 	end
 	render 'show_follow'
+=end
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
   end
   
   def followers
+=begin
     require 'will_paginate/array'
     @title = "Followers"
 	@user = User.find(params[:id])
@@ -75,6 +82,11 @@ class UsersController < ApplicationController
 	  @users_over.unshift(@users_under.shift)
 	end
 	render 'show_follow'
+=end
+	@title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
   end
   
   private
