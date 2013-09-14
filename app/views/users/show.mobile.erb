@@ -13,8 +13,8 @@ $('#clicker').click(function() {
 </div>
 
 <div data-role="content" id="grav-div">
+  <%= gravatar_for @user %>
   <h1>
-    <%= gravatar_for @user %>
     <%= @user.name %>
   </h1>
   <a href="#" data-role="button" id="clicker">expando</a>

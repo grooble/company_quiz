@@ -1,2 +1,14 @@
-<% @question = Question.find(1) %>
-<%= link_to "Take a Quiz", ask_path(:id => @question.id) %>
+  <% if current_user.admin? %>
+  <% @question = Question.last() %>
+  <div class="ui-grid-b">
+    <div class="ui-block-a"><%= link_to "Take a Quiz", ask_path(:id => @question.id), "data-role" => "button" %></div>
+    <div class="ui-block-b"><%= link_to "Make Question", make_path,  "data-role" => "button" %></div>
+    <div class="ui-block-c"><%= link_to "Check Pending", pending_path, "data-role" => "button" %></div>
+  </div>
+  <% else %>
+  <% @question = Question.last() %>
+  <div class="ui-grid-a">
+    <div class="ui-block-a"><%= link_to "Take a Quiz", ask_path(:id => @question.id), "data-role" => "button" %></div>
+    <div class="ui-block-b"><%= link_to "Make Question", make_path,  "data-role" => "button" %></div>
+  </div>
+  <% end %>
