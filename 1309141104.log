@@ -1,0 +1,80 @@
+2013-09-14T02:03:08.485978+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-14 02:03:08 +0000
+2013-09-14T02:03:08.759624+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-14T02:03:08.887610+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (31.7ms)
+2013-09-14T02:03:08.898215+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.8ms)
+2013-09-14T02:03:08.894176+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.3ms)
+2013-09-14T02:03:08.898583+00:00 app[web.1]: Completed 200 OK in 139ms (Views: 83.8ms | ActiveRecord: 43.5ms)
+2013-09-14T02:03:08.896770+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.1ms)
+2013-09-14T02:03:15.571617+00:00 app[web.1]: Started GET "/signin" for 58.188.179.74 at 2013-09-14 02:03:15 +0000
+2013-09-14T02:03:15.579919+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2013-09-14T02:03:15.734932+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/application (152.6ms)
+2013-09-14T02:03:15.736077+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-09-14T02:03:15.744493+00:00 app[web.1]:   Rendered layouts/_header.html.erb (8.1ms)
+2013-09-14T02:03:15.744958+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2013-09-14T02:03:15.745157+00:00 app[web.1]: Completed 200 OK in 165ms (Views: 157.7ms | ActiveRecord: 6.5ms)
+2013-09-14T02:03:33.622959+00:00 app[web.1]: Started POST "/sessions" for 58.188.179.74 at 2013-09-14 02:03:33 +0000
+2013-09-14T02:03:33.641523+00:00 app[web.1]: Processing by SessionsController#create as HTML
+2013-09-14T02:03:33.641770+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"tgivwR09hsTj1D3WAVADhq/PyYCVU0IIdGLyydMnaww=", "session"=>{"email"=>"example@yanmar.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+2013-09-14T02:03:33.991063+00:00 app[web.1]: Completed 302 Found in 349ms (ActiveRecord: 4.2ms)
+2013-09-14T02:03:33.990605+00:00 app[web.1]: Redirected to http://young-wildwood-7107.herokuapp.com/users/1
+2013-09-14T02:03:34.212641+00:00 app[web.1]: Started GET "/users/1" for 58.188.179.74 at 2013-09-14 02:03:34 +0000
+2013-09-14T02:03:34.220732+00:00 app[web.1]: Processing by UsersController#show as HTML
+2013-09-14T02:03:34.220732+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2013-09-14T02:03:35.583499+00:00 app[web.1]:   Rendered shared/_stats.html.erb (1133.1ms)
+2013-09-14T02:03:35.589726+00:00 app[web.1]:   Rendered users/_follow_form.html.erb (0.5ms)
+2013-09-14T02:03:36.129738+00:00 app[web.1]:   Rendered microposts/_micropost.html.erb (369.6ms)
+2013-09-14T02:03:36.131645+00:00 app[web.1]:   Rendered users/show.html.erb within layouts/application (1682.7ms)
+2013-09-14T02:03:36.167338+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.1ms)
+2013-09-14T02:03:36.174592+00:00 app[web.1]: Completed 200 OK in 1954ms (Views: 1232.5ms | ActiveRecor
+d: 506.2ms)
+2013-09-14T02:03:36.170113+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.6ms)
+2013-09-14T02:03:36.174086+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.7ms)
+2013-09-14T02:03:39.022856+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-14 02:03:39 +0000
+2013-09-14T02:03:39.058670+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-14T02:03:39.124614+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (28.9ms)
+2013-09-14T02:03:39.188377+00:00 app[web.1]:   Rendered shared/_stats.html.erb (62.1ms)
+2013-09-14T02:03:39.335108+00:00 app[web.1]:   Rendered shared/_take_test.html.erb (140.2ms)
+2013-09-14T02:03:39.340523+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.6ms)
+2013-09-14T02:03:39.370604+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (34.7ms)
+2013-09-14T02:03:40.141312+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (705.4ms)
+2013-09-14T02:03:40.150460+00:00 app[web.1]:   Rendered shared/_feed.html.erb (771.7ms)
+2013-09-14T02:03:40.150913+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (1055.6ms)
+2013-09-14T02:03:40.153034+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-09-14T02:03:40.159696+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.1ms)
+2013-09-14T02:03:40.175077+00:00 app[web.1]: Completed 200 OK in 1116ms (Views: 911.0ms | ActiveRecord: 173.9ms)
+2013-09-14T02:03:40.174634+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.5ms)
+2013-09-14T02:03:43.967496+00:00 app[web.1]: Started GET "/pending" for 58.188.179.74 at 2013-09-14 02:03:43 +0000
+2013-09-14T02:03:43.989977+00:00 app[web.1]: Processing by QuestionsController#pending as HTML
+2013-09-14T02:03:44.031183+00:00 app[web.1]:   Rendered questions/pending.html.erb within layouts/application (13.1ms)
+2013-09-14T02:03:44.032488+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-09-14T02:03:44.037424+00:00 app[web.1]:   Rendered layouts/_header.html.erb (4.6ms)
+2013-09-14T02:03:44.051225+00:00 app[web.1]: Completed 200 OK in 61ms (Views: 37.5ms | ActiveRecord: 22.0ms)
+2013-09-14T02:03:44.050686+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.6ms)
+2013-09-14T02:03:50.609708+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-14 02:03:50 +0000
+2013-09-14T02:03:50.635262+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-14T02:03:50.702486+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (26.8ms)
+2013-09-14T02:03:50.747226+00:00 app[web.1]:   Rendered shared/_stats.html.erb (29.8ms)
+2013-09-14T02:03:50.752261+00:00 app[web.1]:   Rendered shared/_take_test.html.erb (4.8ms)
+2013-09-14T02:03:50.772727+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.1ms)
+2013-09-14T02:03:50.773590+00:00 app[web.1]:   Rendered shared/_micropost_form.html.er
+b (21.2ms)
+2013-09-14T02:03:51.354975+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (679.7ms)
+2013-09-14T02:03:51.356417+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-09-14T02:03:51.350960+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (533.4ms)
+2013-09-14T02:03:51.354975+00:00 app[web.1]:   Rendered shared/_feed.html.erb (581.1ms)
+2013-09-14T02:03:51.526613+00:00 app[web.1]:   Rendered layouts/_header.html.erb (169.9ms)
+2013-09-14T02:03:51.565883+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (38.7ms)
+2013-09-14T02:03:51.566762+00:00 app[web.1]: Completed 200 OK in 931ms (Views: 805.0ms | ActiveRecord: 123.5ms)
+2013-09-14T02:03:55.380162+00:00 app[web.1]: Started GET "/ask?id=28" for 58.188.179.74 at 2013-09-14 02:03:55 +0000
+2013-09-14T02:03:55.395167+00:00 app[web.1]: Processing by QuestionsController#ask as HTML
+2013-09-14T02:03:55.395357+00:00 app[web.1]:   Parameters: {"id"=>"28"}
+2013-09-14T02:03:55.422137+00:00 app[web.1]: Completed 500 Internal Server Error in 26ms
+2013-09-14T02:03:55.423472+00:00 app[web.1]: 
+2013-09-14T02:03:55.423472+00:00 app[web.1]: LINE 1: ...  "questions".* FROM "questions"  WHERE (approved == 't') OR...
+2013-09-14T02:03:55.423472+00:00 app[web.1]:                                                              ^
+2013-09-14T02:03:55.423472+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::UndefinedFunction: ERROR:  operator does not exist: boolean == unknown
+2013-09-14T02:03:55.423472+00:00 app[web.1]: 
+2013-09-14T02:03:55.423472+00:00 app[web.1]: 
+2013-09-14T02:03:55.423472+00:00 app[web.1]: HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2013-09-14T02:03:55.423472+00:00 app[web.1]: : SELECT  "questions".* FROM "questions"  WHERE (approved == 't') ORDER BY RANDOM() LIMIT 1):
+2013-09-14T02:03:55.423472+00:00 app[web.1]:   app/controllers/questions_controller.rb:31:in `ask'

@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
 	# select a random question from the database and display in 
 	# show.html.erb
   def ask
-	approveds = Question.where("approved == ?", true)
+	approveds = Question.where("approved = ?", true)
 	found = approveds.first(:order => "RANDOM()")
 	@question = Question.find(found)
   end
