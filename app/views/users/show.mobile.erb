@@ -12,11 +12,16 @@ $('#clicker').click(function() {
   <%= link_to "Quiz", ask_path(:id => @question.id), "data-role" => "button", "data-icon" => "star" %>
 </div>
 
-<div data-role="content" id="grav-div">
-  <%= gravatar_for @user %>
-  <h1>
-    <%= @user.name %>
-  </h1>
+<div data-role="content" class="ui-grid-a">
+  <div class="ui-block-a">
+    <%= gravatar_for @user %></div>
+  <div class="ui-block-b">
+    <h2>
+      <%= @user.name %>
+    </h2>
+  </div>
+</div>
+<div>
   <a href="#" data-role="button" id="clicker">expando</a>
 </div>
 

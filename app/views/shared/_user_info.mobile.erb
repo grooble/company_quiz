@@ -1,0 +1,21 @@
+<div class="ui-grid-a">
+  <div class="ui-block-a">
+    <a href="<%= user_path(current_user) %>">
+      <%= gravatar_for current_user, size: 52 %>
+    </a>
+  </div>
+  <div class="ui-block-b">
+    <h2>
+      <%= current_user.name %>
+    </h2>
+  </div>
+</div>
+
+<div class="ui-grid-a">
+  <div class="ui-block-a">
+    <%= link_to "view my profile", current_user %>
+  </div>
+  <div class="ui-block-b">
+    <%= pluralize(current_user.microposts.count, "micropost") %>
+  </div>
+</div>
