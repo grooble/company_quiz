@@ -47,7 +47,7 @@ SampleApp::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # Precompile the jQuery Mobile file jquery.mobile.min.js
-  config.assets.precompile += %w( jquery.mobile.min.js )
+  config.assets.precompile += %w( *.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
