@@ -1,0 +1,63 @@
+2013-09-15T07:11:40.822864+00:00 app[web.1]: => Booting WEBrick
+2013-09-15T07:11:40.822864+00:00 app[web.1]: => Rails 3.2.11 application starting in production on http://0.0.0.0:55346
+2013-09-15T07:11:40.822864+00:00 app[web.1]: => Ctrl-C to shutdown server
+2013-09-15T07:11:40.822864+00:00 app[web.1]: Connecting to database specified by DATABASE_URL
+2013-09-15T07:11:40.822864+00:00 app[web.1]: => Call with -d to detach
+2013-09-15T07:11:41.149701+00:00 app[web.1]: [2013-09-15 07:11:41] INFO  WEBrick 1.3.1
+2013-09-15T07:11:41.149701+00:00 app[web.1]: [2013-09-15 07:11:41] INFO  ruby 1.9.2 (2012-04-20) [x86_64-linux]
+2013-09-15T07:11:41.150099+00:00 app[web.1]: [2013-09-15 07:11:41] INFO  WEBrick::HTTPServer#start: pid=2 port=55346
+2013-09-15T07:16:34.054546+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-15 07:16:34 +0000
+2013-09-15T07:16:34.158958+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T07:16:34.225514+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (5.3ms)
+2013-09-15T07:16:34.258374+00:00 app[web.1]: Completed 200 OK in 99ms (Views: 77.8ms | ActiveRecord: 14.7ms)
+2013-09-15T07:16:34.257120+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.8ms)
+2013-09-15T07:16:34.254910+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.3ms)
+2013-09-15T07:16:34.258204+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.7ms)
+2013-09-15T07:16:53.225477+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 07:16:53 +0000
+2013-09-15T07:16:53.229601+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T07:16:53.236285+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (2.8ms)
+2013-09-15T07:16:53.258059+00:00 app[web.1]: Completed 500 Internal Server Error in 28ms
+2013-09-15T07:16:53.259996+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.css isn't precompiled):
+2013-09-15T07:16:53.259996+00:00 app[web.1]: 
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     10:   </head>
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T07:16:53.260171+00:00 app[web.1]: 
+2013-09-15T07:16:53.259996+00:00 app[web.1]:     11:   <body>
+2013-09-15T07:16:53.259996+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:8:in `_app_views_layouts_application_mobile_erb__3308424547423433161_36691860'
+2013-09-15T07:16:53.260171+00:00 app[web.1]: 
+2013-09-15T07:16:56.484050+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 07:16:56 +0000
+2013-09-15T07:16:56.486206+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T07:16:56.490552+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (1.4ms)
+2013-09-15T07:16:56.493683+00:00 app[web.1]: Completed 500 Internal Server Error in 7ms
+2013-09-15T07:16:56.495787+00:00 app[web.1]: 
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T07:16:56.495787+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.css isn't precompiled):
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     10:   </head>
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     11:   <body>
+2013-09-15T07:16:56.495787+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T07:16:56.495979+00:00 app[web.1]: 
+2013-09-15T07:16:56.495787+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:8:in `_app_views_layouts_application_mobile_erb__3308424547423433161_36691860'
+2013-09-15T07:16:56.495979+00:00 app[web.1]: 
+2013-09-15T07:16:59.820432+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 07:16:59 +0000
+2013-09-15T07:16:59.822534+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T07:16:59.828433+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (1.5ms)
+2013-09-15T07:16:59.831032+00:00 app[web.1]: Completed 500 Internal Server Error in 8ms
+2013-09-15T07:16:59.832751+00:00 app[web.1]: 
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     10:   </head>
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     11:   <body>
+2013-09-15T07:16:59.832751+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.css isn't precompiled):
+2013-09-15T07:16:59.832751+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T07:16:59.832928+00:00 app[web.1]: 
+2013-09-15T07:16:59.832751+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:8:in `_app_views_layouts_application_mobile_erb__3308424547423433161_36691860'
+2013-09-15T07:16:59.832928+00:00 app[web.1]: 
