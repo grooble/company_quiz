@@ -65,7 +65,5 @@ module SampleApp
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 	
-	# Precompile the jQuery Mobile file jquery.mobile.min.js
-	config.assets.precompile += %w( jquery.mobile.min.js )
   end
 end

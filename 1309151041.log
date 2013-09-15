@@ -1,0 +1,68 @@
+2013-09-15T01:36:24.172581+00:00 app[web.1]: [2013-09-15 01:36:24] ERROR SignalException: SIGTERM
+2013-09-15T01:36:24.172581+00:00 app[web.1]: 	/app/vendor/ruby-1.9.2/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2013-09-15T01:36:25.763561+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-09-15T01:36:25.763437+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-09-15T01:36:27.943267+00:00 app[web.1]: => Rails 3.2.11 application starting in production on http://0.0.0.0:3445
+2013-09-15T01:36:27.943267+00:00 app[web.1]: => Ctrl-C to shutdown server
+2013-09-15T01:36:27.943267+00:00 app[web.1]: => Call with -d to detach
+2013-09-15T01:36:27.943267+00:00 app[web.1]: => Booting WEBrick
+2013-09-15T01:36:27.943267+00:00 app[web.1]: Connecting to database specified by DATABASE_URL
+2013-09-15T01:36:28.224425+00:00 app[web.1]: [2013-09-15 01:36:28] INFO  WEBrick 1.3.1
+2013-09-15T01:36:28.224425+00:00 app[web.1]: [2013-09-15 01:36:28] INFO  ruby 1.9.2 (2012-04-20) [x86_64-linux]
+2013-09-15T01:36:28.224827+00:00 app[web.1]: [2013-09-15 01:36:28] INFO  WEBrick::HTTPServer#start: pid=2 port=3445
+2013-09-15T01:39:01.414308+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-15 01:39:01 +0000
+2013-09-15T01:39:01.502424+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T01:39:01.582027+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (6.0ms)
+2013-09-15T01:39:01.614879+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.1ms)
+2013-09-15T01:39:01.612348+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.3ms)
+2013-09-15T01:39:01.616038+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.7ms)
+2013-09-15T01:39:01.616281+00:00 app[web.1]: Completed 200 OK in 114ms (Views: 80.4ms | ActiveRecord: 24.9ms)
+2013-09-15T01:39:17.641856+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 01:39:17 +0000
+2013-09-15T01:39:17.669332+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (4.6ms)
+2013-09-15T01:39:17.655224+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T01:39:17.686375+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:7:in `_app_views_layouts_application_mobile_erb__82024100925446068_28654760'
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     10:   </head>
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     4:     <title>Mobile! <%= full_title(yield(:title)) %></title>
+2013-09-15T01:39:17.686582+00:00 app[web.1]: 
+2013-09-15T01:39:17.682832+00:00 app[web.1]: Completed 500 Internal Server Error in 27ms
+2013-09-15T01:39:17.686375+00:00 app[web.1]: 
+2013-09-15T01:39:17.686375+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.js isn't precompiled):
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T01:39:17.686582+00:00 app[web.1]: 
+2013-09-15T01:39:17.686375+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T01:39:19.802638+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 01:39:19 +0000
+2013-09-15T01:39:19.806379+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T01:39:19.810825+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (1.4ms)
+2013-09-15T01:39:19.814972+00:00 app[web.1]: Completed 500 Internal Server Error in 8ms
+2013-09-15T01:39:19.816580+00:00 app[web.1]: 
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     4:     <title>Mobile! <%= full_title(yield(:title)) %></title>
+2013-09-15T01:39:19.816580+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.js isn't precompiled):
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T01:39:19.816580+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:7:in `_app_views_layouts_application_mobile_erb__82024100925446068_28654760'
+2013-09-15T01:39:19.816580+00:00 app[web.1]:     10:   </head>
+2013-09-15T01:39:19.816813+00:00 app[web.1]: 
+2013-09-15T01:39:19.816813+00:00 app[web.1]: 
+2013-09-15T01:39:26.609133+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 01:39:26 +0000
+2013-09-15T01:39:26.611393+00:00 
+app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T01:39:26.615944+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (1.7ms)
+2013-09-15T01:39:26.617225+00:00 app[web.1]: Completed 500 Internal Server Error in 6ms
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T01:39:26.618611+00:00 app[web.1]: 
+2013-09-15T01:39:26.618611+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.js isn't precompiled):
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     4:     <title>Mobile! <%= full_title(yield(:title)) %></title>
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T01:39:26.618611+00:00 app[web.1]:     10:   </head>
+2013-09-15T01:39:26.618806+00:00 app[web.1]: 
+2013-09-15T01:39:26.618611+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:7:in `_app_views_layouts_application_mobile_erb__82024100925446068_28654760'
+2013-09-15T01:39:26.618806+00:00 app[web.1]: 
