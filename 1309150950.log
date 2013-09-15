@@ -1,0 +1,92 @@
+2013-09-15T00:47:57.011900+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (2.0ms)
+2013-09-15T00:47:57.465094+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (424.2ms)
+2013-09-15T00:47:57.476099+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (517.4ms)
+2013-09-15T00:47:57.476099+00:00 app[web.1]:   Rendered shared/_feed.html.erb (463.8ms)
+2013-09-15T00:47:57.492583+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.1ms)
+2013-09-15T00:47:57.499932+00:00 app[web.1]:   Rendered layouts/_header.html.erb (6.9ms)
+2013-09-15T00:47:57.500555+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.4ms)
+2013-09-15T00:47:57.500807+00:00 app[web.1]: Completed 200 OK in 565ms (Views: 492.1ms | ActiveRecord: 53.2ms)
+2013-09-15T00:47:59.000458+00:00 app[web.1]: Started GET "/pending" for 58.188.179.74 at 2013-09-15 00:47:58 +0000
+2013-09-15T00:47:59.009498+00:00 app[web.1]: Processing by QuestionsController#pending as HTML
+2013-09-15T00:47:59.086584+00:00 app[web.1]:   Rendered questions/pending.html.erb within layouts/application (37.1ms)
+2013-09-15T00:47:59.110390+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (2.2ms)
+2013-09-15T00:47:59.129593+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.4ms)
+2013-09-15T00:47:59.133174+00:00 app[web.1]: Completed 200 OK in 120ms (Views: 79.5ms | ActiveRecord: 35.0ms)
+2013-09-15T00:47:59.128848+00:00 app[web.1]:   Rendered layo
+uts/_header.html.erb (17.7ms)
+2013-09-15T00:48:02.534313+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-15 00:48:02 +0000
+2013-09-15T00:48:02.539373+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T00:48:02.582420+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (17.6ms)
+2013-09-15T00:48:02.609299+00:00 app[web.1]:   Rendered shared/_stats.html.erb (26.6ms)
+2013-09-15T00:48:02.620662+00:00 app[web.1]:   Rendered shared/_take_test.html.erb (11.1ms)
+2013-09-15T00:48:02.625981+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.1ms)
+2013-09-15T00:48:02.626856+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (5.7ms)
+2013-09-15T00:48:02.846316+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (158.8ms)
+2013-09-15T00:48:02.849092+00:00 app[web.1]:   Rendered shared/_feed.html.erb (221.9ms)
+2013-09-15T00:48:02.852199+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (287.8ms)
+2013-09-15T00:48:02.859564+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.0ms)
+2013-09-15T00:48:02.861357+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.7ms)
+2013-09-15T00:48:02.862068+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.4ms)
+2013-09-15T00:48:02.862587+00:00 app[web.1]: Completed 200 OK in 318ms (Views: 228.1ms | ActiveRecord: 73.4ms)
+2013-09-15T00:48:06.875111+00:00 app[web.1]: Started DELETE "/signout" for 58.188.179.74 at 2013-09-15 00:48:06 +0000
+2013-09-15T00:48:06.903864+00:00 app[web.1]: Processing by SessionsController#destroy as HTML
+2013-09-15T00:48:06.903864+00:00 app[web.1]:   Parameters: {"authenticity_token"=>"2V5U8KMKAyo7HEkQ0ytaA+XVOldyDreuHt6CNkxH1Wo="}
+2013-09-15T00:48:06.905401+00:00 app[web.1]: Redirected to http://young-wildwood-7107.herokuapp.com/
+2013-09-15T00:48:06.945683+00:00 app[web.1]: Completed 302 Found in 42ms (ActiveRecord: 0.0ms)
+2013-09-15T00:48:07.180602+00:00 app[web.1]: Started GET "/" for 58.188.179.74 at 2013-09-15 00:48:07 +0000
+2013-09-15T00:48:07.191812+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T00:48:07.224884+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.9ms)
+2013-09-15T00:48:07.219406+00:00 app[web.1]:   Rendered static_pages/home.html.erb within layouts/application (8.9ms)
+2013-09-15T00:48:07.221030+00:00 app[web.1]:   Rendered layouts/_shim.html.erb (0.4ms)
+2013-09-15T00:48:07.231362+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.8ms)
+2013-09-15T00:48:07.231580+00:00 app[web.1]: Completed 200 OK in 40ms (Views: 21.5ms | ActiveRecord: 7.3ms)
+2013-09-15T00:49:02.806948+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 00:49:02 +0000
+2013-09-15T00:49:02.810257+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T00:49:02.855180+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (13.4ms)
+2013-09-15T00:49:03.046981+00:00 app[web.1]: Completed 500 Internal Server Error in 232ms
+2013-09-15T00:49:03.050738+00:00 app[web.1]: 
+2013-09-15T00:49:03.050738+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.js isn't precompiled):
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     4:     <title>Mobile! <%= full_title(yield(:title)) %></title>
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     10:   </head>
+2013-09-15T00:49:03.050738+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:7:in `_app_views_layouts_application_mobile_erb__3301818594931151056_38280760'
+2013-09-15T00:49:03.050945+00:00 app[web.1]: 
+2013-09-15T00:49:03.050945+00:00 app[web.1]: 
+2013-09-15T00:49:03.050738+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T00:49:17.090363+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 00:49:17 +0000
+2013-09-15T00:49:17.093254+00:00 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T00
+:49:17.106914+00:00 app[web.1]:     4:     <title>Mobile! <%= full_title(yield(:title)) %></title>
+2013-09-15T00:49:17.101519+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (4.5ms)
+2013-09-15T00:49:17.104731+00:00 app[web.1]: Completed 500 Internal Server Error in 11ms
+2013-09-15T00:49:17.106914+00:00 app[web.1]: 
+2013-09-15T00:49:17.106914+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.js isn't precompiled):
+2013-09-15T00:49:17.106914+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T00:49:17.106914+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T00:49:17.106914+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T00:49:17.106914+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T00:49:17.106914+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T00:49:17.106914+00:00 app[web.1]:     10:   </head>
+2013-09-15T00:49:17.106914+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:7:in `_app_views_layouts_application_mobile_erb__3301818594931151056_38280760'
+2013-09-15T00:49:17.107095+00:00 app[web.1]: 
+2013-09-15T00:49:17.107095+00:00 app[web.1]: 
+2013-09-15T00:49:30.071704+00:00 app[web.1]: Started GET "/" for 1.75.153.107 at 2013-09-15 00:49:30 +0000
+2013-09-15T00:49:30.162445+00:0
+0 app[web.1]: Processing by StaticPagesController#home as HTML
+2013-09-15T00:49:30.222716+00:00 app[web.1]:   Rendered static_pages/home.mobile.erb within layouts/application (1.7ms)
+2013-09-15T00:49:30.224157+00:00 app[web.1]: Completed 500 Internal Server Error in 61ms
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     9:     <%= csrf_meta_tags %>
+2013-09-15T00:49:30.264032+00:00 app[web.1]: ActionView::Template::Error (jquery.mobile.min.js isn't precompiled):
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     4:     <title>Mobile! <%= full_title(yield(:title)) %></title>
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     5: 	<meta name="viewport" content="width=device-width, initial-scale=1">
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     6:     <%= javascript_include_tag "application" %>
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     7:     <%= javascript_include_tag "jquery.mobile.min.js" %>
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     8:     <%= stylesheet_link_tag    "jquery.mobile.min.css" %>
+2013-09-15T00:49:30.264032+00:00 app[web.1]: 
+2013-09-15T00:49:30.264032+00:00 app[web.1]:     10:   </head>
+2013-09-15T00:49:30.264266+00:00 app[web.1]: 
+2013-09-15T00:49:30.264266+00:00 app[web.1]: 
+2013-09-15T00:49:30.264032+00:00 app[web.1]:   app/views/layouts/application.mobile.erb:7:in `_app_views_layouts_application_mobile_erb__3301818594931151056_38280760'
