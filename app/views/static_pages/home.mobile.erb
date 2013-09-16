@@ -22,45 +22,26 @@
   <div data-role="content">
 	<%= render 'shared/take_test' %>
   </div>
-  <div data-role="footer">
-    <div class="ui-grid-b">
-      <div class="ui-block-a">
-	    <%= link_to "About",   about_path, "data-role" => "button" %>
-	  </div>
-      <div class="ui-block-b">
-	    <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
-		    :confirm=> "Leave this page?", "data-role" => "button" %>
-	  </div>
-      <div class="ui-block-c">
-	    <%= link_to "Signout", signout_path, method: "delete", "data-role" => "button" %>
-	  </div>
-	</div>
-  </div>
+
 <% else %>
+<head>
+  <style>
+  #flying img{ 
+    display: block;
+    margin: 0 auto; 
+	margin-top: 100px;
+	margin-bottom: 100px
+  }
+  </style>
+</head>
   <div data-role="header">
-  	<%= link_to "Home",    root_path %>
-	<h2>Yanmar Quiz mobile</h2>
+    <%= link_to "Join", signup_path %>
+	<h2>Yanmar Quiz Mobile</h2>
     <%= link_to "Sign in", signin_path %>
   </div>
-
-  <h1>Welcome to the Yanmar Quiz</h1>
-
-  <h2>
-    <div data-role="link">
-	  This is the mobile home page for the
-      <a href="https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts">Yanmar Quiz</a>.
-	</div>
-  </h2>
-
-  <div data-role="link">
-    <%= link_to image_tag("yanmar.jpg", alt: "Yanmar"), 'http://www.yanmar.com/en/' %>
-  </div>
-  <div data-role="footer">
-    <div class="ui-grid-b">
-      <div class="ui-block-a"><%= link_to "About",   about_path %></div>
-      <div class="ui-block-b"><%= link_to "Yanmar News", 
-	      "http://www.yanmar.co.jp/en/news/index.html", :confirm=> "Leave this page?" %></div>
-      <div class="ui-block-c"><%= link_to "Contact", contact_path %></div>
-	</div>
+  <div id="flying">
+    <%= link_to image_tag('flying-y.png'), signin_path %>
   </div>
 <% end %>
+
+<%= render 'layouts/footer' %>
