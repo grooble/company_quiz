@@ -43,6 +43,17 @@ $('#clicker').click(function() {
 </div>
   
 <% end %>
-
-<div data-role="footer" id="footer-div">
+<div data-role="footer">
+  <div class="ui-grid-b">
+    <div class="ui-block-a">
+	  <%= link_to "About",   about_path, "data-role" => "button" %>
+	</div>
+    <div class="ui-block-b">
+	  <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
+	      :confirm=> "Leave this page?", "data-role" => "button" %>
+	</div>
+    <div class="ui-block-c">
+	  <%= link_to "Signout", signout_path, method: "delete", "data-role" => "button" %>
+	</div>
+  </div>
 </div>
