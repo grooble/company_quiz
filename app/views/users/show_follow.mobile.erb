@@ -1,6 +1,6 @@
 <% provide(:title, @title) %>
   <div data-role="header">
-  	<%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+  	<%= link_to "Home", root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
 	<h2>Yanmar Quiz mobile</h2>
     <% @question = Question.find(1) %>
     <%= link_to "Quiz", ask_path(:id => @question.id) %>
@@ -31,8 +31,15 @@
 	
   <div data-role="footer">
     <div class="ui-grid-b">
-      <div class="ui-block-a"><%= link_to "Following",   about_path, "data-role" => "button" %></div>
-      <div class="ui-block-b"><%= link_to "News Feed", "http://www.yanmar.co.jp/en/news/index.html", :confirm=> "Leave this page?", "data-role" => "button" %></div>
-      <div class="ui-block-c"><%= link_to "Followers", contact_path, "data-role" => "button" %></div>
+      <div class="ui-block-a">
+	    <%= link_to "Following",   about_path, "data-role" => "button" %>
+	  </div>
+      <div class="ui-block-b">
+	    <%= link_to "News Feed", "http://www.yanmar.co.jp/en/news/index.html", 
+		    :confirm=> "Leave this page?", "data-role" => "button" %>
+	  </div>
+      <div class="ui-block-c">
+	    <%= link_to "Followers", contact_path, "data-role" => "button" %>
+	  </div>
 	</div>
   </div>

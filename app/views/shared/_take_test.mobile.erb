@@ -3,15 +3,15 @@
   <div class="ui-grid-b">
     <div class="ui-block-a">
 	  <%= link_to "Quiz", ask_path(:id => @question.id), 
-	      "data-role" => "button", data-mini="true", data-icon="star" %>
+	      "data-role" => "button", "data-mini" => "true", "data-icon" => "star" %>
 	</div>
     <div class="ui-block-b">
 	  <%= link_to "New", make_path, 
-	      "data-role" => "button", data-mini="true", data-icon="edit" %>
+	      "data-role" => "button", "data-mini" => "true", "data-icon" => "edit" %>
 	</div>
     <div class="ui-block-c">
 	  <%= link_to "Check", pending_path, 
-	      "data-role" => "button", data-mini="true", data-icon="check" %>
+	      "data-role" => "button", "data-mini" => "true", "data-icon" => "check" %>
 	</div>
   </div>
   <% else %>
@@ -19,11 +19,11 @@
   <div class="ui-grid-a">
     <div class="ui-block-a">
 	  <%= link_to "Quiz", ask_path(:id => @question.id), 
-	      "data-role" => "button", data-mini="true", data-icon="star" %>
+	      "data-role" => "button", "data-mini" => "true", "data-icon" => "star" %>
 	</div>
     <div class="ui-block-b">
 	  <%= link_to "New", make_path, 
-	      "data-role" => "button", data-mini="true", data-icon="edit" %>
+	      "data-role" => "button", "data-mini" => "true", "data-icon" => "edit" %>
 	</div>
   </div>
   <% end %>
