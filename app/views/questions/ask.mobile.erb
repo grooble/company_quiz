@@ -1,8 +1,8 @@
 <% if signed_in? %>
   <div data-role="header">
-  	<%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+  	<%= link_to 'Back', :back, "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
 	<h2>Yanmar Quiz mobile</h2>
-    <%= link_to "Quiz", ask_path(:id => @question.id) %>
+    <%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
   </div>
 <% else %>
   <div data-role="header">
@@ -24,7 +24,16 @@
 </div>
   
 <div data-role="footer">
-  <%= link_to "Hint", "#", "data-role" => "button" %>
-  <%= link_to "About",   about_path %>
-  <%= link_to "Create", "#", "data-role" => "button" %>
+  <div class="ui-grid-b">
+    <div class="ui-block-a">
+      <%= link_to "About",   about_path, "data-role" => "button" %>
+    </div>
+    <div class="ui-block-b">
+      <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
+          :confirm=> "Leave this page?", "data-role" => "button" %>
+    </div>
+    <div class="ui-block-c">
+      <%= link_to "Signout", signout_path, method: "delete", "data-role" => "button" %>
+    </div>
+  </div>
 </div>
