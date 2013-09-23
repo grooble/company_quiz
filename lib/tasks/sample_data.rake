@@ -17,6 +17,7 @@ def make_users
     name  = Faker::Name.name
     email = "example-#{n+1}@yanmar.com"
     password  = "password"
+	language = "en"
     User.create!(name:     name,
                  email:    email,
                  password: password,
