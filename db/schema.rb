@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907110805) do
+ActiveRecord::Schema.define(:version => 20130922020604) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20130907110805) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.boolean  "approved",   :default => false
+    t.string   "language",   :default => "en"
   end
 
   create_table "relationships", :force => true do |t|
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20130907110805) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
+    t.string   "language"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,4 +1,4 @@
-<div data-role="header" id="title-div">
+﻿<div data-role="header" id="title-div">
   <%= link_to "Back", :back, "data-role" => "button", 
       "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
   <h1>Make Question</h1>
@@ -21,6 +21,20 @@
 	
 	<%= q.label :option3, "Option 3" %>
 	<%= q.text_field :option3 %>
+	
+	<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+    	<legend>Language</legend>
+         	<input type="radio" name="language" id="radio-choice-1" value="en" checked="checked" />
+         	<label for="radio-choice-1">English</label>
+
+         	<input type="radio" name="language" id="radio-choice-2" value="jp"  />
+         	<label for="radio-choice-2">日本語</label>
+
+         	<input type="radio" name="language" id="radio-choice-3" value="cn"  />
+         	<label for="radio-choice-3">Chinese</label>
+    </fieldset>
+</div>
 	
 	<%= q.hidden_field :approved, :value => false %>
 	

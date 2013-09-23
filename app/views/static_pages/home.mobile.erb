@@ -1,7 +1,8 @@
 <% if signed_in? %>
   <div data-role="header">
-  	<%= link_to "Home",    root_path, "data-icon" => "home", 
-	    "data-mini" => "true" %>
+    <% date = DateTime.current().to_i %>
+  	<%= link_to "Settings",    edit_user_path(current_user), "data-icon" => "edit", 
+	    "data-mini" => "true", "timestamp" => date %>
 	<h1>Yanmar Quiz mobile</h1>
     <% @question = Question.find(1) %>
     <%= link_to "Quiz", ask_path(:id => @question.id), "data-icon" => "star", 

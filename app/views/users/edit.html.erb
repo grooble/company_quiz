@@ -1,4 +1,4 @@
-<% provide(:title, "Edit user") %> 
+﻿<% provide(:title, "Edit user") %> 
 <h1>Update your profile</h1>
 
 <div class="row">
@@ -17,6 +17,13 @@
 
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
+	  
+	  <%= f.radio_button :language, 'en', :checked => true %>
+	  <%= f.label :language_en, 'English' %>
+	  <%= f.radio_button :language, 'jp' %>
+	  <%= f.label :language_jp, '日本語' %>
+	  <%= f.radio_button :language, 'cn' %>
+	  <%= f.label :language_cn, 'Chinese' %>
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>

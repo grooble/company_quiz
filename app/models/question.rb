@@ -20,6 +20,7 @@ class Question < ActiveRecord::Base
   validates :option1, presence: true
   validates :option2, presence: true
   validates :option3, presence: true
+  validates :language, presence: true
 
-  attr_accessible :category, :correct, :option1, :option2, :option3, :qn, :approved
+  attr_accessible :category, :correct, :option1, :option2, :option3, :qn, :approved, :language
 end

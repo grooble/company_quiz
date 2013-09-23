@@ -1,7 +1,8 @@
 <% provide(:title, @user.name) %>
 <div data-role="header" id="title-div">
+  <% date = DateTime.current().to_i %>
   <%= link_to "Home", root_path, "data-role" => "button", "data-icon" => "home", 
-      "data-iconpos" => "notext", "timestamp" => Time.now.httpdate %>
+      "data-iconpos" => "notext", "timestamp" => date %>
   <h2 id="h2-id">Yanmar Quiz mobile</h2>
   <% @question = Question.find(1) %>
   <%= link_to "Quiz", ask_path(:id => @question.id), "data-role" => "button", "data-icon" => "star" %>
@@ -27,12 +28,7 @@
   <ul data-role="listview" >
     <%= render @microposts %>
   </ul>
-  <%= will_paginate @microposts, 
-	    renderer: WillPaginate::ActionView::JqueryMobilePaginateLinkRenderer,
-		id: 'mobile_pagination',
-		previous_label: 'Prev',
-		next_label: 'Next'
-		%>
+  <%= will_paginate @microposts %>
 </div>
   
 <% end %>

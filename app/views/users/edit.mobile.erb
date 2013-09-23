@@ -1,0 +1,46 @@
+﻿<div data-role="header" id="title-div">
+  <%= link_to "Back", :back, "data-role" => "button", 
+      "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
+  <h1>Make Question</h1>
+  <%= link_to "Home", root_path, "data-role" => "button", 
+      "data-icon" => "home", "data-iconpos" => "notext" %>
+</div>
+
+<h1>Update your profile</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.password_field :password_confirmation %>
+	  
+	  <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+    	  <legend>Language</legend>
+	      <%= f.radio_button :language, 'en', :checked => true %>
+	      <%= f.label :language_en, 'English' %>
+	      <%= f.radio_button :language, 'jp' %>
+	      <%= f.label :language_jp, '日本語' %>
+	      <%= f.radio_button :language, 'cn' %>
+	      <%= f.label :language_cn, 'Chinese' %>
+        </fieldset>
+      </div>
+
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails">change</a>
+  </div>
+</div>
