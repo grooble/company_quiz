@@ -22,7 +22,7 @@ def make_users
                  email:    email,
                  password: password,
                  password_confirmation: password,
-				 languate: language)
+				 language: language)
   end
 end
 
