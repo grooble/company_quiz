@@ -1,11 +1,11 @@
 <div data-role="header" id="title-div">
-  <%= link_to "Home", root_path, "data-role" => "button", "data-icon" => "home", "data-iconpos" => "notext" %>
-  <h2 id="h2-id">Yanmar Quiz mobile</h2>
+  <%= link_to t('header.home'), root_path, "data-role" => "button", "data-icon" => "home", "data-iconpos" => "notext" %>
+  <h2 id="h2-id"><%=t 'title' %></h2>
   <% @question = Question.find(1) %>
-  <%= link_to "Quiz", ask_path(:id => @question.id), "data-role" => "button", "data-icon" => "star" %>
+  <%= link_to t('quiz'), ask_path(:id => @question.id), "data-role" => "button", "data-icon" => "star" %>
 </div>
 
-<h1>Approve Questions</h1>
+<h1><%=t 'question.pending' %></h1>
 
 <% @pended.each do |p| %>
 <div class="ui-grid-a">
@@ -15,11 +15,11 @@
   <div class="ui-block-b">
     <div class="ui-grid-a">
 	  <div class="ui-block-a">
-	    <%= link_to 'Approve', approve_path(:qid => p.id), "data-role" => "button",
+	    <%= link_to t('control.approve'), approve_path(:qid => p.id), "data-role" => "button",
 		    "data-icon" => "check", "data-iconpos" => "notext" %>
 	  </div>
 	  <div class="ui-block-b">
-	    <%= link_to 'Delete', p, :confirm => 'Are you sure?', "data-role" => "button",
+	    <%= link_to t('control.delete'), p, :confirm => 'Are you sure?', "data-role" => "button",
 		    :method => :delete, "data-icon" => "delete", "data-iconpos" => "notext" %>
 	  </div>
 	</div>

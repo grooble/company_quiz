@@ -1,4 +1,4 @@
-<h3>Congratulations</h3>
+<h3><%=t 'question.correct_msg' %></h3>
 
 <p>"<%= @question.qn %>"</p> 
-<p>"<%= @option_value %>" was correct!</p>
+<p>"<%= @option_value %><%=t 'question.correct_choice' %></p>

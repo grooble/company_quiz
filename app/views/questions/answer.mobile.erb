@@ -1,20 +1,20 @@
 <div data-role="header">
-  <%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
-  <h2>Yanmar Quiz mobile</h2>
-  <%= link_to "Quiz", ask_path(:id => @question.id) %>
+  <%= link_to t('home'),    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+  <h2><%=t 'title' %></h2>
+  <%= link_to t('quiz'), ask_path(:id => @question.id) %>
 </div>
-<h2>Answer</h2>
+<h2><%=t 'answer' %></h2>
 
   <%= render :partial => "correct" if @right_answer %>
   <%= render :partial => "incorrect" if !@right_answer %>
   
 <div class="ui-grid-a">
   <div class="ui-block-a">
-	  <%= link_to "Quiz", ask_path(:id => @question.id), 
+	  <%= link_to t('quiz'), ask_path(:id => @question.id), 
 	      "data-role" => "button", "data-mini" => "true", "data-icon" => "star" %>
   </div>
   <div class="ui-block-b">
-	  <%= link_to "New", make_path, 
+	  <%= link_to t('question.make_mobile'), make_path, 
 	      "data-role" => "button", "data-mini" => "true", "data-icon" => "edit" %>
   </div>
 </div>
@@ -22,14 +22,14 @@
 <div data-role="footer">
   <div class="ui-grid-b">
     <div class="ui-block-a">
-      <%= link_to "About",   about_path, "data-role" => "button" %>
+      <%= link_to t('static.about.title'),   about_path, "data-role" => "button" %>
     </div>
     <div class="ui-block-b">
-      <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
-          :confirm=> "Leave this page?", "data-role" => "button" %>
+      <%= link_to t('yanmar'), t('footer.newsurl'), 
+          :confirm=> t('control.confirm_leave'), "data-role" => "button" %>
     </div>
     <div class="ui-block-c">
-      <%= link_to "Signout", signout_path, method: "delete", "data-role" => "button" %>
+      <%= link_to t('header.signout'), signout_path, method: "delete", "data-role" => "button" %>
     </div>
   </div>
 </div>

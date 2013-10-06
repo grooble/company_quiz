@@ -1,7 +1,149 @@
-# Sample localization file for English. Add more files in this directory for other locales.
+﻿# Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  welcome: "Welcome to the Yanmar Quiz"
+  title: "Yanmar Quiz"
+  intro1: "This is the home page for the "
+  intro2: ""
+  yanmar: "Yanmar"
+  yanmarurl: "http://www.yanmar.com/en/"
+  facebook: "facebook page"
+  wiki: "wiki"
+  quiz: "Quiz"
+
+  will_paginate:
+    previous_label: "&#8592; Previous"
+    next_label: "Next &#8594;"
+    page_gap: "&hellip;"
+
+  control:
+    approve: "Approve"
+    delete: "Delete"
+    edit: "Edit"
+    confirm: "Are you sure?"
+    confirm_leave: "Leave this page?"
+    user_destroyed: "User destroyed."
+
+  session:
+    invalid_login: "Invalid email/password combination"
+
+  static:
+    about:
+      title: "About"
+      yanmarquiz: "The Yanmar Quiz"
+      text1: "is where you can learn about Yanmar and its new Mission."
+      text2: "Try a few questions and challenge your friends! Then post your score on our "
+      text3: "This is the sample quiz application."
+    contact:
+      title: "Contact"
+      text1: "Contact us here: "
+      quizfbpage: "The Quiz Facebook Page"
+    help:
+      title: "Help"
+      text1: "Get help on the Yanmar Quiz at the"
+      text2: "...or take a look at the"
+
+  page:
+    signin:
+      title: "Sign in"
+      submit: "Sign in"
+      new_user_text: "New user? "
+      new_user_link: "Sign up now!"
+
+  footer:
+    news: "Yanmar news"
+    newsurl: "http://www.yanmar.co.jp/en/news/index.html"
+
+  form:
+    name: "Name"
+    email: "Email"
+    password: "Password"
+    verify: "Verify"
+    language: "Language"
+
+  header:
+    home: "Home"
+    help: "Help"
+    users: "Users"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    signout: "Sign out"
+    signin: "Sign in"
+    join: "Sign up"
+    back: "Back"
+
+  error:
+    error_msg_1: "This form contains "
+    error_msg_2: "."
+
+  feed:
+    title: "News Feed"
+
+# fix plurals
+  feed_item:
+    post1: "Posted "
+    post2: ""
+    ago: "ago."
+
+  post:
+    compose: "Compose new post..."
+    submit: "Post"
+    posts: "Posts"
+    created: "Post created!"
+
+# fix plurals
+  stats:
+    following: "Following"
+    followers: "Followers"
+    tests: "tests"
+
+# fix plurals
+  user_info:
+    profile: "View my profile"
+    micropost: "micropost"
+    profile_updated: "Profile updated"
+
+  question:
+    title: "Quiz"
+    make: "Make a Question"
+    make_mobile: "New"
+    question: "Question"
+    qn_short: "Q: "
+    answer: "Answer"
+    correct: "Correct"
+    option1: "Option 1"
+    option2: "Option 2"
+    option3: "Option 3"
+    submit: "Create Question"
+    correct_choice: " was correct!"
+    correct_msg: "Congratulations!"
+    incorrect_msg: "Too bad..."
+    incorrect_text: "The correct answer was: "
+    again: "Try again"
+    pending: "Approve Questions"
+    take_quiz: "Take a Quiz"
+    created: "Question successfully created!"
+    flash_error: "You have missing question fields"
+    approve_success: "Question successfully approved!"
+    approve_error: "There was an error updating your question. Try again."
+    delete_success: "Question deleted."
+    delete_failed: "Delete failed."
+
+  user:
+    follow: "Follow"
+    unfollow: "Unfollow"
+    show_microposts: "Show microposts"
+
+  index:
+    all_users: "All users"
+
+  edit:
+    title: "Update your profile"  
+    submit: "Save changes"
+    change: "change"
+
   activerecord:
     attributes:
       user:

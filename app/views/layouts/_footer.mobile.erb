@@ -2,14 +2,14 @@
   <div data-role="footer">
     <div class="ui-grid-b">
       <div class="ui-block-a">
-	    <%= link_to "About",   about_path, "data-role" => "button" %>
+	    <%= link_to t('static.about.title'),   about_path, "data-role" => "button" %>
 	  </div>
       <div class="ui-block-b">
-	    <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
-		    :confirm=> "Leave this page?", "data-role" => "button" %>
+	    <%= link_to t('yanmar'), t('footer.newsurl'), 
+		    :confirm=> t('control.confirm_leave'), "data-role" => "button" %>
 	  </div>
       <div class="ui-block-c">
-	    <%= link_to "Signout", signout_path, method: "delete", "data-role" => "button" %>
+	    <%= link_to t('header.signout'), signout_path, method: "delete", "data-role" => "button" %>
 	  </div>
 	</div>
   </div>    
@@ -17,14 +17,14 @@
   <div data-role="footer">
     <div class="ui-grid-b">
       <div class="ui-block-a">
-	    <%= link_to "About",   about_path, "data-role" => "button" %>
+	    <%= link_to t('static.about.title'),   about_path, "data-role" => "button" %>
 	  </div>
       <div class="ui-block-b">
-	    <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
-		    :confirm=> "Leave this page?", "data-role" => "button" %>
+	    <%= link_to t('yanmar'), t('footer.newsurl'), 
+		    :confirm=> t('control.confirm_leave'), "data-role" => "button" %>
 	  </div>
       <div class="ui-block-c">
-	    <%= link_to "Contact", contact_path, "data-role" => "button" %>
+	    <%= link_to t('static.contact.title'), contact_path, "data-role" => "button" %>
 	  </div>
 	</div>
   </div>

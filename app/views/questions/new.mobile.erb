@@ -1,40 +1,38 @@
 ﻿<div data-role="header" id="title-div">
-  <%= link_to "Back", :back, "data-role" => "button", 
+  <%= link_to t('question.back'), :back, "data-role" => "button", 
       "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
-  <h1>Make Question</h1>
-  <%= link_to "Home", root_path, "data-role" => "button", 
+  <h1><%=t 'question.make' %></h1>
+  <%= link_to t('header.home'), root_path, "data-role" => "button", 
       "data-icon" => "home", "data-iconpos" => "notext" %>
 </div>
 
   <%= form_for(@question) do |q| %>
-    <%= q.label :qn, "Question" %>
+    <%= q.label :qn, t('question.question') %>
 	<%= q.text_field :qn %>
 	
-	<%= q.label :correct %>
+	<%= q.label :correct, t('question.correct') %>
 	<%= q.text_field :correct %>
 	
-	<%= q.label :option1, "Option 1" %>
+	<%= q.label :option1, t('question.option1')%>
 	<%= q.text_field :option1 %>
 	
-	<%= q.label :option2, "Option 2" %>
+	<%= q.label :option2, t('question.option2') %>
 	<%= q.text_field :option2 %>
 	
-	<%= q.label :option3, "Option 3" %>
+	<%= q.label :option3, t('question.option3') %>
 	<%= q.text_field :option3 %>
 	
 	<div data-role="fieldcontain">
-    <fieldset data-role="controlgroup" data-type="horizontal">
-    	<legend>Language</legend>
-         	<input type="radio" name="language" id="radio-choice-1" value="en" checked="checked" />
-         	<label for="radio-choice-1">English</label>
-
-         	<input type="radio" name="language" id="radio-choice-2" value="jp"  />
-         	<label for="radio-choice-2">日本語</label>
-
-         	<input type="radio" name="language" id="radio-choice-3" value="cn"  />
-         	<label for="radio-choice-3">Chinese</label>
-    </fieldset>
-</div>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend><%=t 'form.language' %></legend>
+	    <%= q.radio_button :language, 'en', :checked => true %>
+	    <%= q.label :language_en, 'English' %>
+	    <%= q.radio_button :language, 'ja' %>
+	    <%= q.label :language_ja, '日本語' %>
+	    <%= q.radio_button :language, 'cn' %>
+	    <%= q.label :language_cn, '汉语' %>
+      </fieldset>
+    </div>
 	
 	<%= q.hidden_field :approved, :value => false %>
 	

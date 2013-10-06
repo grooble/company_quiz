@@ -1,10 +1,10 @@
 <div data-role="header">
-	  <%= link_to "Home",    root_path %>
-	  <h2>Yanmar Quiz mobile</h2>
+	  <%= link_to t('header.home'),    root_path %>
+	  <h2><"=t 'title' %></h2>
   <% if signed_in? %>
 	<% @question = Question.find(1) %>
-    <%= link_to "Quiz", ask_path(:id => @question.id) %>
+    <%= link_to t('question.quiz'), ask_path(:id => @question.id) %>
   <% else %>
-    <%= link_to "Sign in", signin_path %>
+    <%= link_to t('header.signin'), signin_path %>
   <% end %>
 </div>

@@ -1,9 +1,9 @@
 <% provide(:title, @title) %>
   <div data-role="header">
-  	<%= link_to "Home", root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
-	<h2>Yanmar Quiz mobile</h2>
+  	<%= link_to t('header.home'), root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+	<h2><%=t 'title' %></h2>
     <% @question = Question.find(1) %>
-    <%= link_to "Quiz", ask_path(:id => @question.id) %>
+    <%= link_to t('quiz'), ask_path(:id => @question.id) %>
   </div>
   
   <div class="ui-grid-a">
@@ -12,7 +12,7 @@
   </div>
       
       
-  <b>Microposts:</b> <%= @user.microposts.count %>
+  <b><%=t 'post.posts' %></b> <%= @user.microposts.count %>
   <%= render 'shared/stats' %>
 	
     <% if @users.any? %>
@@ -21,25 +21,21 @@
       <ul data-role="listview">
         <%= render @users %>
       </ul>
-      <%= will_paginate @users, 
-	    renderer: WillPaginate::ActionView::JqueryMobilePaginateLinkRenderer,
-		previous_label: 'Prev',
-		next_label: 'Next'
-		%>
+      <%= will_paginate %>
 	</div>
 	<% end %>
 	
   <div data-role="footer">
     <div class="ui-grid-b">
       <div class="ui-block-a">
-	    <%= link_to "Following",   about_path, "data-role" => "button" %>
+	    <%= link_to t('stats.following'),   about_path, "data-role" => "button" %>
 	  </div>
       <div class="ui-block-b">
-	    <%= link_to "News Feed", "http://www.yanmar.co.jp/en/news/index.html", 
-		    :confirm=> "Leave this page?", "data-role" => "button" %>
+	    <%= link_to t('feed.title'), t('footer.newsurl'), 
+		    :confirm=> t('control.confirm_leave'), "data-role" => "button" %>
 	  </div>
       <div class="ui-block-c">
-	    <%= link_to "Followers", contact_path, "data-role" => "button" %>
+	    <%= link_to t('stats.followers'), contact_path, "data-role" => "button" %>
 	  </div>
 	</div>
   </div>

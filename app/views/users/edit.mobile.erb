@@ -1,46 +1,46 @@
 ﻿<div data-role="header" id="title-div">
-  <%= link_to "Back", :back, "data-role" => "button", 
+  <%= link_to t('control.back'), :back, "data-role" => "button", 
       "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
-  <h1>Make Question</h1>
-  <%= link_to "Home", root_path, "data-role" => "button", 
+  <h1><%=t 'question.make' %></h1>
+  <%= link_to t('header.home'), root_path, "data-role" => "button", 
       "data-icon" => "home", "data-iconpos" => "notext" %>
 </div>
 
-<h1>Update your profile</h1>
+<h1><%=t 'edit.title' %></h1>
 
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name %>
+      <%= f.label :name, t('form.name') %>
       <%= f.text_field :name %>
 
-      <%= f.label :email %>
+      <%= f.label :email, t('form.email') %>
       <%= f.text_field :email %>
 
-      <%= f.label :password %>
+      <%= f.label :password, t('form.password') %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.label :password_confirmation, t('form.verify') %>
       <%= f.password_field :password_confirmation %>
 	  
 	  <div data-role="fieldcontain">
         <fieldset data-role="controlgroup" data-type="horizontal">
-    	  <legend>Language</legend>
+    	  <legend><%=t 'form.language' %></legend>
 	      <%= f.radio_button :language, 'en', :checked => true %>
 	      <%= f.label :language_en, 'English' %>
-	      <%= f.radio_button :language, 'jp' %>
-	      <%= f.label :language_jp, '日本語' %>
+	      <%= f.radio_button :language, 'ja' %>
+	      <%= f.label :language_ja, '日本語' %>
 	      <%= f.radio_button :language, 'cn' %>
 	      <%= f.label :language_cn, 'Chinese' %>
         </fieldset>
       </div>
 
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <%= f.submit t('edit.submit'), class: "btn btn-large btn-primary" %>
     <% end %>
 
     <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
+    <a href="http://gravatar.com/emails"><%=t 'edit.change' %></a>
   </div>
 </div>

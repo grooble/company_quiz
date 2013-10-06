@@ -1,8 +1,8 @@
 <% provide(:title, 'Help') %>
-<h1>Help</h1>
+<h1><%=t 'static.help.title' %></h1>
 <p>
-	Get help on the Yanmar Quiz at the 
-	<a href="https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts">Facebook page</a>
-	...or take a look at the 
-	<a href="http://en.wikipedia.org/wiki/Quiz">Wiki</a>.
+	<%=t 'static.help.text1' %>
+    <%= link_to t('facebook'), "https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts" %>
+	<%=t 'static.help.text2' %>
+    <%= link_to t('wiki'), "http://en.wikipedia.org/wiki/Quiz" %>.
 </p>

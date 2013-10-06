@@ -11,17 +11,16 @@ class QuestionsController < ApplicationController
     @question = Question.new(params[:question])
 	if @question.save
 	  @user = current_user
-	  flash[:success] = "Question successfully created!"
+	  flash[:success] = t('question.created')
 	  redirect_to @user
 	else
-	  flash.now[:error] = 'You have missing question fields'
+	  flash.now[:error] = t('question.flash_error')
 	  render 'new'
     end
   end
   
   def show
     @question = Question.find(params[:id])
-	#@option_value = question.try(params[:option])
   end
     
 	# select a random question from the database and display in 
@@ -52,10 +51,10 @@ class QuestionsController < ApplicationController
 	@pended.approved = true
 	if @pended.save
 	  @user = current_user
-	  flash[:success] = 'Question successfully approved!'
+	  flash[:success] = t('question.approve_success')
 	  redirect_to :back
 	else
-	  flash.now[:error] = 'There was an error updating your question. Try again.'
+	  flash.now[:error] = t('question.approve_error')
 	  redirect_to @user
     end	
   end
@@ -63,10 +62,10 @@ class QuestionsController < ApplicationController
   def destroy
     if Question.find(params[:id]).destroy
      @user = current_user
-	 flash[:success] = "Question deleted."
+	 flash[:success] = t('question.delete_success')
      redirect_to :back
     else
-      flash.now[:error] = 'Delete failed. Try again.'
+      flash.now[:error] = t('queation.delete_failed')
 	  redirect_to @user
 	end
  end

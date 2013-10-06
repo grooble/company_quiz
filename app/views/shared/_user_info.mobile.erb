@@ -11,9 +11,9 @@
 
 <div class="ui-grid-a">
   <div class="ui-block-a">
-    <%= link_to "view my profile", current_user %>
+    <%= link_to t('user_info.profile'), current_user %>
   </div>
   <div class="ui-block-b">
-    <%= pluralize(current_user.microposts.count, "micropost") %>
+    <%= pluralize(current_user.microposts.count, t('user_info.micropost')) %>
   </div>
 </div>

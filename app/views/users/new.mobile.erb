@@ -19,6 +19,9 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
+	  
+	  <%= f.label :language, "Language" %>
+	  <%= f.select :language, [['English', 'en'], ['Japanese', 'ja'], ['Chinese', 'cn']] %>
 
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>

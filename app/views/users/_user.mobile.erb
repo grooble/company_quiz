@@ -4,15 +4,15 @@
     <div class="ui-block-b" style="width:35%"><%= link_to user.name, user %></div>
 	<div class="ui-block-c" style="width: 25%">
       <% if user.question_ids.count!=0 %>
-        Tests: <%= user.question_ids.count %>
+        <%=t 'stats.tests' %><%= user.question_ids.count %>
       <% else %>
         &nbsp;
 	  <% end %>	
 	</div>
     <div class="ui-block-d" style="width:15%">
 	  <% if current_user.admin? && !current_user?(user) %>
-      <%= link_to "del", user, method: :delete,
-                                  data: { confirm: "You sure?" },
+      <%= link_to t('control.delete'), user, method: :delete,
+                                  data: { confirm: t('control.confirm') },
 								  "data-role" => "button" %>
       <% else %>
         &nbsp;

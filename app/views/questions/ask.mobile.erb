@@ -1,18 +1,18 @@
 <% if signed_in? %>
   <div data-role="header">
-  	<%= link_to 'Back', :back, "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
-	<h2>Yanmar Quiz mobile</h2>
-    <%= link_to "Home",    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
+  	<%= link_to t('header.back'), :back, "data-icon" => "arrow-l", "data-iconpos" => "notext" %>
+	<h2><%=t 'title' %></h2>
+    <%= link_to t('header.home'),    root_path, "data-icon" => "home", "data-iconpos" => "notext" %>
   </div>
 <% else %>
   <div data-role="header">
-  	<%= link_to "Home",    root_path %>
-	<h2>Yanmar Quiz mobile</h2>
-    <%= link_to "Sign in", signin_path %>
+  	<%= link_to t('header.home'),    root_path %>
+	<h2><%=t 'title' %></h2>
+    <%= link_to t('header.signin'), signin_path %>
   </div>
 <% end %>
 
-<h2>Quiz Qn - mobile</h2>
+<h2><%=t 'question.question' %></h2>
     <%= @question.qn %>
 
 <div data-role="controlgroup">
@@ -26,14 +26,14 @@
 <div data-role="footer">
   <div class="ui-grid-b">
     <div class="ui-block-a">
-      <%= link_to "About",   about_path, "data-role" => "button" %>
+      <%= link_to t('static.about.title'),   about_path, "data-role" => "button" %>
     </div>
     <div class="ui-block-b">
-      <%= link_to "Yanmar", "http://www.yanmar.co.jp/en/news/index.html", 
-          :confirm=> "Leave this page?", "data-role" => "button" %>
+      <%= link_to t('yanmar'), t('footer.newsurl'), 
+          :confirm=> t('control.confirm_leave'), "data-role" => "button" %>
     </div>
     <div class="ui-block-c">
-      <%= link_to "Signout", signout_path, method: "delete", "data-role" => "button" %>
+      <%= link_to t('header.signout'), signout_path, method: "delete", "data-role" => "button" %>
     </div>
   </div>
 </div>

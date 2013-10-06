@@ -1,4 +1,4 @@
-<h1>Approve Questions</h1>
+<h1><%=t 'question.pending' %></h1>
 
 <div class="row">
   <div class="span6 offset3">
@@ -6,8 +6,8 @@
     <% @pended.each do |p| %>
     <tr>
       <td><%= p.id %>: <%= p.qn %></td>
-	  <td><%= link_to 'Approve', approve_path(:qid => p.id) %></td>
-      <td><%= link_to 'Delete', p, :confirm => 'Are you sure?', :method => :delete %></td>
+	  <td><%= link_to t('control.approve'), approve_path(:qid => p.id) %></td>
+      <td><%= link_to t('control.delete'), p, :confirm => t('control.confirm'), :method => :delete %></td>
     </tr>
     <% end %>
   </table>

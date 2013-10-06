@@ -1,30 +1,30 @@
-﻿<h1>Make Question</h1>
+﻿<h1><%=t 'question.make' %></h1>
 
 <div class="row">
   <div class="span6 offset3">
   <%= form_for(@question) do |q| %>
-    <%= q.label :qn %>
+    <%= q.label :qn, t('question.question')  %>
 	<%= q.text_field :qn %>
 	
-	<%= q.label :correct %>
+	<%= q.label t('question.correct') %>
 	<%= q.text_field :correct %>
 	
-	<%= q.label :option1 %>
+	<%= q.label t('question.option1') %>
 	<%= q.text_field :option1 %>
 	
-	<%= q.label :option2 %>
+	<%= q.label t('question.option2') %>
 	<%= q.text_field :option2 %>
 	
-	<%= q.label :option3 %>
+	<%= q.label t('question.option3') %>
 	<%= q.text_field :option3 %>
 	
 	<%= q.radio_button :language, 'en', :checked => true %> English
-	<%= q.radio_button :language, 'jp' %> 日本語
-	<%= q.radio_button :language, 'cn' %> Chinese
+	<%= q.radio_button :language, 'ja' %> 日本語
+	<%= q.radio_button :language, 'cn' %> 汉语
 	
 	<%= q.hidden_field :approved, :value => false %>
 	
-	<%= q.submit %>
+	<%= q.submit t('question.submit') %>
   <% end %>
   </div>
 </div>

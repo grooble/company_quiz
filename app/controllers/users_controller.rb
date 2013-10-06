@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 	if @user.save
 	  sign_in @user
-	  flash[:success] = "Welcome to the Yanmar Quiz!"
+	  flash[:success] = t('welcome')
 	  redirect_to @user
 	else
 	  render 'new'
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
+    flash[:success] = t('control.user_destroyed')
     redirect_to users_url
   end
   
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update_attributes(params[:user])
-	  flash[:success] = "Profile updated"
+	  flash[:success] = t('user_info.profile_updated')
 	  sign_in @user
 	  redirect_to @user
 	else
@@ -62,7 +62,8 @@ class UsersController < ApplicationController
 	end
 	render 'show_follow'
 =end
-    @title = "Following"
+    require 'will_paginate/array'
+    @title = t('stats.following')
     @user = User.find(params[:id])
     @users = @user.followed_users.paginate(page: params[:page])
     render 'show_follow'
@@ -70,7 +71,6 @@ class UsersController < ApplicationController
   
   def followers
 =begin
-    require 'will_paginate/array'
     @title = "Followers"
 	@user = User.find(params[:id])
 	@cutoff = @user.question_ids.count
@@ -83,7 +83,8 @@ class UsersController < ApplicationController
 	end
 	render 'show_follow'
 =end
-	@title = "Followers"
+    require 'will_paginate/array'
+	@title = t('stats.followers')
     @user = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'

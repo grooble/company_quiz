@@ -1,6 +1,6 @@
-<h3>Congratulations</h3>
+<h3><%=t 'question.correct_msg' %></h3>
 
 <div data-role="content">
-  <p>Q: <%= @question.qn %></p>
-  "<%= @option_value %>" was correct!
+  <p><%=t 'question.qn_short' %><%= @question.qn %></p>
+  "<%= @option_value %>"<%=t 'question.correct_choice' %>
 </div>

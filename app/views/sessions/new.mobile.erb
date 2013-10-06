@@ -1,9 +1,10 @@
   <div data-role="header">
-  	<%= link_to "Home",    root_path %>
-	<h2>Yanmar Quiz mobile</h2>
-    <%= link_to "Sign in", signin_path %>
-  </div><% provide(:title, "Sign in") %>
-<h1>Mobile sign in!!</h1>
+  	<%= link_to t('header.home'),    root_path %>
+	<h2><%=t 'title' %></h2>
+    <%= link_to t('header.join'), signup_path %>
+  </div>
+<% provide(:title, t('page.signin.title')) %>
+<h1><%=t 'page.signin.title' %></h1>
 
 <%= form_for(:session, url: sessions_path) do |f| %>
 
@@ -12,12 +13,12 @@
   <%= f.label :password %>
   <%= f.password_field :password %>
 
-  <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+  <%= f.submit t('page.signin.submit'), class: "btn btn-large btn-primary" %>
 <% end %>
 
-New user? <%= link_to "Sign up now!", signup_path %></p>
+<%=t 'page.signin.new_user_text' %><%= link_to t('page.signin.new_user_link'), signup_path %></p>
 <div data-role="footer">
-  <%= link_to "About",   about_path %>
-  <%= link_to "Yanmar News", "http://www.yanmar.co.jp/en/news/index.html", :confirm=> "Leave this page?" %>
-  <%= link_to "Contact", contact_path %>
+  <%= link_to t('static.about.title'),   about_path %>
+  <%= link_to t('footer.news'), t('footer.newsurl'), :confirm=> t('control.confirm_leave') %>
+  <%= link_to t('static.contact.title'), contact_path %>
 </div>

@@ -6,7 +6,7 @@
     <strong id="following" class="stat">
       <%= @user.followed_users.count %>
     </strong>
-    following
+    <%=t 'stats.following' %>
   </a>
   </div>
   <div class="ui-block-b">
@@ -14,13 +14,13 @@
     <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>
-    followers
+    <%=t 'stats.followers' %>
   </a>
   </div>
   <div class="ui-block-c">
     <strong id="followers" class="stat">
       <%= @user.question_ids.count %>
     </strong>
-    tests taken
+    <%=t 'stats.tests' %>
   </div>
 </div>

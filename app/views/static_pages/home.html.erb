@@ -15,22 +15,23 @@
       </section>
     </aside>
 	<div class="span8">
-      <h3>Micropost Feed</h3>
+      <h3><%=t 'feed.title' %></h3>
       <%= render 'shared/feed' %>
     </div>
   </div>  
 <% else %>
   <div class="center hero-unit">
-    <h1>Welcome to the Yanmar Quiz</h1>
+    <h1><%=t 'welcome' %></h1>
 
     <h2>
-      This is the home page for the
-      <a href="https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts">Yanmar Quiz</a>.
+      <%=t 'intro1' %>
+	  <%= link_to t('title'), "https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts" %>
+	  <%=t 'intro2' %>
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, 
+    <%= link_to t('header.join'), signup_path, 
                                 class: "btn btn-large btn-primary" %>
   </div>
 
-  <%= link_to image_tag("yanmar.jpg", alt: "Yanmar"), 'http://www.yanmar.com/en/' %>
+  <%= link_to image_tag("yanmar.jpg", alt: "Yanmar"), t('yanmarurl') %>
 <% end %> 

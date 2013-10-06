@@ -1,6 +1,6 @@
-<h3>Too bad...</h3>
+<h3><%=t 'question.incorrect_msg' %></h3>
 
 <div data-role="content">
   <p><%= @question.qn %></p>
-  The correct answer was: "<%= @question.correct %>
+  <%=t 'question.incorrect_text' %><%= @question.correct %>
 </div>

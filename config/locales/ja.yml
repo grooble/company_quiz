@@ -1,0 +1,141 @@
+ja:
+  welcome: "ヤンマークイズへようこそ"
+  title: "ヤンマークイズ"
+  intro1: ""
+  intro2: "のホームページです"
+  yanmar: "ヤンマー"
+  yanmarurl: "http://www.yanmar.co.jp/"
+  facebook: "フェイスブックページ"
+  wiki: "ウィキ"
+  quiz: "クイズ"
+
+  will_paginate:
+    previous_label: "&#8592; 前へ"
+    next_label: "次へ &#8594;"
+    page_gap: "&hellip;"
+
+  control:
+    approve: "承認"
+    delete: "削除"
+    edit: "変更"
+    confirm: "確定"
+    confirm_leave: "このページを出る？"
+    user_destroyed: "ユーザー削除"
+
+  session:
+    invalid_login: "パスワード・メールは正しくありません"
+
+  static:
+    about:
+      title: "ヤンマークイズについて"
+      yanmarquiz: "ヤンマークイズ"
+      text1: "を使って、ヤンマーやその新ミッションステートメントのことを知る。"
+      text2: "問題を試してみて、友達に挑戦しましょう！後で、自分のスコアをヤンマーのfacebookページに搭載しよう。"
+      text3: "このアプリはまだ開発中です。"
+    contact:
+      title: "連絡"
+      text1: "ここで連絡してください： "
+      quizfbpage: "クイズのフェイスブックページ"
+    help:
+      title: "ヘルプ"
+      text1: "ヤンマークイズのヘルプはここ："
+      text2: "また、ウィキもあります："
+
+  page:
+    signin:
+      title: "ログイン"
+      submit: "ログイン"
+      new_user_text: "新しくメンバーになる？　"
+      new_user_link: "今すぐ登録"
+
+  footer:
+    news: "ヤンマー　ニューズ"
+    newsurl: "http://www.yanmar.co.jp/news/index.html"
+
+  form:
+    name: "名前"
+    email: "メール"
+    password: "パスワード"
+    verify: "確認"
+    language: "言語"
+
+  header:
+    home: "ホーム"
+    help: "ヘルプ"
+    users: "ユーザー"
+    account: "アカウント"
+    profile: "プロフィール"
+    settings: "設定"
+    signout: "ログアウト"
+    signin: "ログイン"
+    join: "登録"
+    back: "前へ"
+
+  error:
+    error_msg_1: "このフォームに"
+    error_msg_2: "エラーがあります。"
+
+  feed:
+    title: "ニューズフィード"
+
+# fix plurals
+  feed_item:
+    post1: ""
+    post2: "投稿しました。"
+    ago: "前"
+
+  post:
+    compose: "投稿する"
+    submit: "投稿"
+    posts: "投稿の数"
+    created: "投稿作成しました！"
+
+# fix plurals
+  stats:
+    following: "フォローしている"
+    followers: "フォロワー"
+    tests: "完了テスト "
+
+# fix plurals
+  user_info:
+    profile: "プロフィールを見る"
+    micropost: "投稿"
+    profile_updated: "プロフィル変更済み"
+
+  question:
+    title: "クイズ"
+    make: "問題を作成する"
+    make_mobile: "作成"
+    question: "問題"
+    qn_short: "問題：　"
+    answer: "答え"
+    correct: "正解"
+    option1: "選択 1"
+    option2: "選択 2"
+    option3: "選択 3"
+    submit: "問題作成"
+    correct_choice: "は正解です！"
+    correct_msg: "おめでとう！"
+    incorrect_msg: "残念"
+    incorrect_text: "正解は：　"
+    again: "もう一度"
+    pending: "問題の承認"
+    created: "問題作成しました！"
+    flash_error: "問題のフィールドは正しくありません"
+    approve_success: "問題追加しました！"
+    approve_error: "エラーが発生しました。もう一度提供してください。"
+    delete_success: "問題削除しました。"
+    delete_failed: "問題削除を失敗しました。"
+
+  user:
+    follow: "フォローする"
+    unfollow: "フォロー解除"
+    show_microposts: "投稿を見せる"
+
+  index:
+    all_users: "全ユーザー"
+
+  edit:
+    title: "プロフィルを変更する"
+    submit: "変更を保存"
+    change: "変更"

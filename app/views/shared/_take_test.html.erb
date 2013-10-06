@@ -1,10 +1,9 @@
-<%# TODO get a question when non exists or use existing  %>
-<%# and shift this code into a helper to make it neater. %>
+<%# TODO shift this code into a helper to make it neater. %>
 <%# Use in answer.html.erb and the home page.			 %>
 
 
 <% @question = Question.last() %>
-<%= link_to "Take a Quiz", ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
+<%= link_to t('question.take_quiz'), ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
 <%= link_to "Make Question", make_path, class: "btn btn-large btn-primary" %>
 <% if current_user.admin? %>
   <%= link_to "Check Pending", pending_path, class: "btn btn-large btn-primary" %>

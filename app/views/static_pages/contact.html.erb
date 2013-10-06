@@ -1,8 +1,6 @@
 <% provide(:title, 'Contact') %>
-<h1>Contact</h1>
+<h1><%=t 'static.contact.title' %></h1>
 <p>
-	Contact us here:
-	<a href="https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts">The Quiz Facebook Page</a>.
-	To get help at the Quiz Wiki
-	<a href="http://en.wikipedia.org/wiki/Quiz">Wiki Quiz</a>.
+	<%=t 'static.contact.text1' %>
+	<%= link_to t('static.contact.quizfbpage'), "https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts" %>
 </p>

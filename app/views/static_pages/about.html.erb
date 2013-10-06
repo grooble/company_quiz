@@ -1,12 +1,13 @@
 <% provide(:title, 'About Us') %>
-<h1>About Us</h1>
-<p>The <a href="http://www.yanmar.com/en/">Yanmar</a> Quiz
-  is a quiz where you can learn about Yanmar and its new Mission.
+<h1><%=t 'static.about.title' %></h1>
+<p>
+  <%= link_to t('static.about.yanmarquiz'),  t('yanmarurl') %>
+  <%=t 'static.about.text1' %>
 </p>
 <p>
-  Try a few questions and challenge your friends!
-  Then post your score on our <a href="https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts">facebook page</a>. 
+  <%=t 'static.about.text2' %>
+  <%= link_to t('facebook'), "https://www.facebook.com/YANMAR.Official?ref=ts&fref=ts" %> 
 </p>
 <p>
-  This is the sample quiz application.
+  <%=t 'static.about.text3' %>
 </p>

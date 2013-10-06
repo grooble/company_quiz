@@ -1,11 +1,11 @@
 <% if signed_in? %>
   <div data-role="header">
     <% date = DateTime.current().to_i %>
-  	<%= link_to "Settings",    edit_user_path(current_user), "data-icon" => "edit", 
+  	<%= link_to t('header.settings'),    edit_user_path(current_user), "data-icon" => "edit", 
 	    "data-mini" => "true", "timestamp" => date %>
-	<h1>Yanmar Quiz mobile</h1>
+	<h1><%=t 'header.title' %></h1>
     <% @question = Question.find(1) %>
-    <%= link_to "Quiz", ask_path(:id => @question.id), "data-icon" => "star", 
+    <%= link_to t('question.title'), ask_path(:id => @question.id), "data-icon" => "star", 
 	    "data-mini" => "true", "rel" => "external" %>
   </div>
   <div data-role="content">
@@ -36,9 +36,9 @@
   </style>
 </head>
   <div data-role="header">
-    <%= link_to "Join", signup_path %>
-	<h2>Yanmar Quiz Mobile</h2>
-    <%= link_to "Sign in", signin_path %>
+    <%= link_to t('header.join'), signup_path %>
+	<h2><%=t 'title' %></h2>
+    <%= link_to t('header.signin'), signin_path %>
   </div>
   <div id="flying">
     <%= link_to image_tag('quiz.jpg'), signin_path %>
