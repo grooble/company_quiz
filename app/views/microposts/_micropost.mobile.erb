@@ -4,8 +4,8 @@
     <div class="ui-block-b" style="width:15%"><%= time_ago_in_words(micropost.created_at) %> ago.</div>
     <div class="ui-block-c" style="width:15%">
 	<% if current_user?(micropost.user) %>
-      <%= link_to "del", micropost, method: :delete,
-                                     data: { confirm: "You sure?" },
+      <%= link_to t('control.delete'), micropost, method: :delete,
+                                     data: { confirm: t('control.confirm') },
                                      title: micropost.content, 
 									 "data-role" => "button" %>
     <% else %>

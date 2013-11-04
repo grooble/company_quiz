@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+﻿<h1>Sign up</h1>
 <div data-role="header">
   <% provide(:title, 'Sign up') %>
 </div>
@@ -20,9 +20,30 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 	  
-	  <%= f.label :language, "Language" %>
-	  <%= f.select :language, [['English', 'en'], ['Japanese', 'ja'], ['Chinese', 'cn']] %>
-
+	  <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+    	  <legend><%=t 'edit.language' %></legend>
+	      <%= f.radio_button :language, 'en', :checked => true %>
+	      <%= f.label :language_en, 'English' %>
+	      <%= f.radio_button :language, 'ja' %>
+	      <%= f.label :language_ja, '日本語' %>
+	      <%= f.radio_button :language, 'cn' %>
+	      <%= f.label :language_cn, '汉语' %>
+        </fieldset>
+      </div>
+	  
+	  <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+    	  <legend><%=t 'edit.question_language' %></legend>
+  	      <%= f.check_box :question_language, {multiple: true, checked: true}, 'en', nil %>
+	      <%= f.label :question_language_en, 'English' %>
+	      <%= f.check_box :question_language, {multiple: true}, 'ja', nil %>
+	      <%= f.label :question_language_ja, '日本語' %>
+	      <%= f.check_box :question_language, {multiple: true}, 'cn', nil %>
+	      <%= f.label :question_language_cn, '汉语' %>
+        </fieldset>
+      </div>
+	  
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

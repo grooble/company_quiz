@@ -3,7 +3,12 @@
     <div class="ui-block-a" style="width:15%"><%= link_to gravatar_for(feed_item.user), feed_item.user %></div>
     <div class="ui-block-b" style="width:15%"><%= link_to feed_item.user.name, feed_item.user %></div>
 	<div class="ui-block-c" style="width:40%"><%= feed_item.content %></div>
-    <div class="ui-block-d" style="width:15%"><%=t 'feed_tiem.post1' %><%= time_ago_in_words(feed_item.created_at) %><%=t 'feed_item.ago' %><%=t 'feed_tiem.post2' %></div>
+    <div class="ui-block-d" style="width:15%">
+	  <%=t 'feed_item.post1' %>
+	  <%= time_ago_in_words(feed_item.created_at) %>
+	  <%=t 'feed_item.ago' %>
+	  <%=t 'feed_tiem.post2' %>
+	</div>
     <div class="ui-block-e" style="width:15%">  <% if current_user?(feed_item.user) %>
       <%= link_to t('control.delete'), feed_item, method: :delete,
                                      data: { confirm: t('control.confirm') },

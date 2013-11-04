@@ -1,10 +1,11 @@
 ja:
-  welcome: "ヤンマークイズへようこそ"
-  title: "ヤンマークイズ"
+
+  welcome: "Yクイズへようこそ"
+  title: "Yクイズ"
   intro1: ""
   intro2: "のホームページです"
-  yanmar: "ヤンマー"
-  yanmarurl: "http://www.yanmar.co.jp/"
+  yanmar: "Y"
+  yanmarurl: "http://www.y.co.jp/"
   facebook: "フェイスブックページ"
   wiki: "ウィキ"
   quiz: "クイズ"
@@ -13,6 +14,45 @@ ja:
     previous_label: "&#8592; 前へ"
     next_label: "次へ &#8594;"
     page_gap: "&hellip;"
+
+  datetime:
+    distance_in_words:
+      format:
+        separator: ""
+      about_x_hours:
+        one: 約1時間
+        other: 約%{count}時間
+      about_x_months:
+        one: 約1ヶ月
+        other: 約%{count}ヶ月
+      about_x_years:
+        one: 約1年
+        other: 約%{count}年
+      almost_x_years:
+        one: 1年弱
+        other: ! '%{count}年弱'
+      half_a_minute: 30秒前後
+      less_than_x_minutes:
+        one: 1分以内
+        other: ! '%{count}分未満'
+      less_than_x_seconds:
+        one: 1秒以内
+        other: ! '%{count}秒未満'
+      over_x_years:
+        one: 1年以上
+        other: ! '%{count}年以上'
+      x_days:
+        one: 1日
+        other: ! '%{count}日'
+      x_minutes:
+        one: 1分
+        other: ! '%{count}分'
+      x_months:
+        one: 1ヶ月
+        other: ! '%{count}ヶ月'
+      x_seconds:
+        one: 1秒
+        other: ! '%{count}秒'      
 
   control:
     approve: "承認"
@@ -27,10 +67,10 @@ ja:
 
   static:
     about:
-      title: "ヤンマークイズについて"
-      yanmarquiz: "ヤンマークイズ"
-      text1: "を使って、ヤンマーやその新ミッションステートメントのことを知る。"
-      text2: "問題を試してみて、友達に挑戦しましょう！後で、自分のスコアをヤンマーのfacebookページに搭載しよう。"
+      title: "Yクイズについて"
+      yanmarquiz: "Yクイズ"
+      text1: "を使って、Yやその新ミッションステートメントのことを知る。"
+      text2: "問題を試してみて、友達に挑戦しましょう！後で、自分のスコアをYのfacebookページに搭載しよう。"
       text3: "このアプリはまだ開発中です。"
     contact:
       title: "連絡"
@@ -38,7 +78,7 @@ ja:
       quizfbpage: "クイズのフェイスブックページ"
     help:
       title: "ヘルプ"
-      text1: "ヤンマークイズのヘルプはここ："
+      text1: "Yクイズのヘルプはここ："
       text2: "また、ウィキもあります："
 
   page:
@@ -49,8 +89,8 @@ ja:
       new_user_link: "今すぐ登録"
 
   footer:
-    news: "ヤンマー　ニューズ"
-    newsurl: "http://www.yanmar.co.jp/news/index.html"
+    news: "Y　ニュース"
+    newsurl: "http://www.y.co.jp/news/index.html"
 
   form:
     name: "名前"
@@ -71,17 +111,27 @@ ja:
     join: "登録"
     back: "前へ"
 
+  shared:
+    take_test:
+      quiz: "クイズ。。。"
+      take_quiz: "する"
+      make: "作成"
+      make_mobile: "作成"
+      check_pending: "承認"
+      check_mobile: "承認"
+
   error:
     error_msg_1: "このフォームに"
     error_msg_2: "エラーがあります。"
 
   feed:
-    title: "ニューズフィード"
+    title: "ニュースフィード"
 
-# fix plurals
   feed_item:
+    format:
+      separator: ""
     post1: ""
-    post2: "投稿しました。"
+    post2: "の投稿です。"
     ago: "前"
 
   post:
@@ -104,8 +154,6 @@ ja:
 
   question:
     title: "クイズ"
-    make: "問題を作成する"
-    make_mobile: "作成"
     question: "問題"
     qn_short: "問題：　"
     answer: "答え"
@@ -139,3 +187,8 @@ ja:
     title: "プロフィルを変更する"
     submit: "変更を保存"
     change: "変更"
+    language: "メニュー等の言語"
+    question_language: "クイズ問題の言語(複数可能)"
+
+  helper:
+    signedin: "ログインしてください。"

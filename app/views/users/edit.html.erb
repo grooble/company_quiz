@@ -18,13 +18,22 @@
       <%= f.label :password_confirmation, t('form.verify') %>
       <%= f.password_field :password_confirmation %>
 	  
+      <p><%=t 'edit.language' %></p>
 	  <%= f.radio_button :language, 'en', :checked => true %>
 	  <%= f.label :language_en, 'English' %>
 	  <%= f.radio_button :language, 'ja' %>
 	  <%= f.label :language_ja, '日本語' %>
 	  <%= f.radio_button :language, 'cn' %>
-	  <%= f.label :language_cn, 'Chinese' %>
-
+	  <%= f.label :language_cn, '汉语' %>
+      
+      <p><%=t 'edit.question_language' %></p>
+  	  <%= f.check_box :question_language, {multiple: true, checked: true}, 'en', nil %>
+	  <%= f.label :question_language_en, 'English' %>
+	  <%= f.check_box :question_language, {multiple: true}, 'ja', nil %>
+	  <%= f.label :question_language_ja, '日本語' %>
+	  <%= f.check_box :question_language, {multiple: true}, 'cn', nil %>
+	  <%= f.label :question_language_cn, '汉语' %>
+	  
       <%= f.submit t('edit.submit'), class: "btn btn-large btn-primary" %>
     <% end %>
 

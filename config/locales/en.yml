@@ -2,12 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  welcome: "Welcome to the Yanmar Quiz"
-  title: "Yanmar Quiz"
+  welcome: "Welcome to the Y Quiz"
+  title: "Y Quiz"
   intro1: "This is the home page for the "
   intro2: ""
-  yanmar: "Yanmar"
-  yanmarurl: "http://www.yanmar.com/en/"
+  yanmar: "Y"
+  yanmarurl: "http://www.y.com/en/"
   facebook: "facebook page"
   wiki: "wiki"
   quiz: "Quiz"
@@ -31,8 +31,8 @@ en:
   static:
     about:
       title: "About"
-      yanmarquiz: "The Yanmar Quiz"
-      text1: "is where you can learn about Yanmar and its new Mission."
+      yanmarquiz: "The Y Quiz"
+      text1: "is where you can learn about Y and its new Mission."
       text2: "Try a few questions and challenge your friends! Then post your score on our "
       text3: "This is the sample quiz application."
     contact:
@@ -41,7 +41,7 @@ en:
       quizfbpage: "The Quiz Facebook Page"
     help:
       title: "Help"
-      text1: "Get help on the Yanmar Quiz at the"
+      text1: "Get help on the Y Quiz at the"
       text2: "...or take a look at the"
 
   page:
@@ -52,8 +52,8 @@ en:
       new_user_link: "Sign up now!"
 
   footer:
-    news: "Yanmar news"
-    newsurl: "http://www.yanmar.co.jp/en/news/index.html"
+    news: "Y news"
+    newsurl: "http://www.Y.co.jp/en/news/index.html"
 
   form:
     name: "Name"
@@ -74,6 +74,15 @@ en:
     join: "Sign up"
     back: "Back"
 
+  shared:
+    take_test:
+      quiz: "Quiz Actions"
+      take_quiz: "Take"
+      make: "Make"
+      make_mobile: "New"
+      check_pending: "Confirm"
+      check_mobile: "Confirm"
+
   error:
     error_msg_1: "This form contains "
     error_msg_2: "."
@@ -85,7 +94,7 @@ en:
   feed_item:
     post1: "Posted "
     post2: ""
-    ago: "ago."
+    ago: "　ago."
 
   post:
     compose: "Compose new post..."
@@ -107,8 +116,6 @@ en:
 
   question:
     title: "Quiz"
-    make: "Make a Question"
-    make_mobile: "New"
     question: "Question"
     qn_short: "Q: "
     answer: "Answer"
@@ -123,7 +130,6 @@ en:
     incorrect_text: "The correct answer was: "
     again: "Try again"
     pending: "Approve Questions"
-    take_quiz: "Take a Quiz"
     created: "Question successfully created!"
     flash_error: "You have missing question fields"
     approve_success: "Question successfully approved!"
@@ -134,7 +140,7 @@ en:
   user:
     follow: "Follow"
     unfollow: "Unfollow"
-    show_microposts: "Show microposts"
+    show_microposts: "Show microposts"    
 
   index:
     all_users: "All users"
@@ -143,6 +149,11 @@ en:
     title: "Update your profile"  
     submit: "Save changes"
     change: "change"
+    language: "Menu language"
+    question_language: "Accept Questions in: (many languages ok)"
+
+  helper:
+    signedin: "Please sign in."
 
   activerecord:
     attributes:

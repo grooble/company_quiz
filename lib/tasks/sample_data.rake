@@ -11,6 +11,7 @@ def make_users
   admin = User.create!(name:     "Example User",
                        email:    "example@yanmar.com",
 					   language: "ja",
+					   question_language: "en",
                        password: "foobar",
                        password_confirmation: "foobar")
   admin.toggle!(:admin)
@@ -19,6 +20,7 @@ def make_users
     email = "example-#{n+1}@yanmar.com"
     password  = "password"
 	language = "en"
+	question_language = ["en", "ja", "cn"].sample
     User.create!(name:     name,
                  email:    email,
                  language: language,

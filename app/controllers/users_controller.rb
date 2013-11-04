@@ -10,18 +10,25 @@ class UsersController < ApplicationController
   end
   
   def new
-    @user = User.new
+    #@user = User.new
+	# -----
+	flash[:info] = 'Registrations are not open yet, but please check back soon'
+    redirect_to root_path
   end
   
   def create
-    @user = User.new(params[:user])
-	if @user.save
-	  sign_in @user
-	  flash[:success] = t('welcome')
-	  redirect_to @user
-	else
-	  render 'new'
-	end
+    #@user = User.new(params[:user])
+	#if @user.save
+	#  sign_in @user
+	#  flash[:success] = t('welcome')
+	#  redirect_to @user
+	#else
+	#  render 'new'
+	#end
+	#
+	# -----
+	flash[:info] = 'Registrations are not open yet, but please check back soon'
+    redirect_to root_path
   end
   
   def destroy
@@ -34,6 +41,8 @@ class UsersController < ApplicationController
   end
   
   def update
+	langs = params[:user][:question_language].join(",")
+	params[:user][:question_language] = langs
     if @user.update_attributes(params[:user])
 	  flash[:success] = t('user_info.profile_updated')
 	  sign_in @user

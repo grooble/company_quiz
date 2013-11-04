@@ -13,7 +13,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation, :language
+  attr_accessible :name, :email, :password, :password_confirmation, :language, :question_language
   has_secure_password
   # the associating qns taken with the user
   has_many :takens, dependent: :destroy
@@ -68,6 +68,10 @@ class User < ActiveRecord::Base
   # shows all questions taken
   def taken
     
+  end
+  
+  def question_languages
+    "#{question_language}"
   end
   
   def sort_following_by_taken

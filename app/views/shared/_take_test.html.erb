@@ -3,8 +3,9 @@
 
 
 <% @question = Question.last() %>
-<%= link_to t('question.take_quiz'), ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
-<%= link_to "Make Question", make_path, class: "btn btn-large btn-primary" %>
+<p><%=t 'shared.take_test.quiz' %></p>
+<%= link_to t('shared.take_test.take_quiz'), ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
+<%= link_to t('shared.take_test.make'), make_path, class: "btn btn-large btn-primary" %>
 <% if current_user.admin? %>
-  <%= link_to "Check Pending", pending_path, class: "btn btn-large btn-primary" %>
+  <%= link_to t('shared.take_test.check_pending'), pending_path, class: "btn btn-large btn-primary" %>
 <% end %>
