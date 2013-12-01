@@ -24,6 +24,7 @@ def make_users
     User.create!(name:     name,
                  email:    email,
                  language: language,
+				 question_language: language,
 				 password: password,
                  password_confirmation: password
 				 )
