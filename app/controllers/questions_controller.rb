@@ -2,9 +2,18 @@ class QuestionsController < ApplicationController
   before_filter :signed_in_user
   before_filter :admin_user, only: [:destroy, :approve]
 
+  def show_all
+    @questions = Question.all
+	render 'index'
+  end
 
   def new
     @question = Question.new
+  end
+  
+  def index
+    @user = current_user
+    @questions = Question.takens_taken(@user)
   end
   
   def create
@@ -68,7 +77,7 @@ class QuestionsController < ApplicationController
 	 flash[:success] = t('question.delete_success')
      redirect_to :back
     else
-      flash.now[:error] = t('queation.delete_failed')
+      flash.now[:error] = t('question.delete_failed')
 	  redirect_to @user
 	end
  end

@@ -119,6 +119,8 @@ ja:
       make_mobile: "作成"
       check_pending: "承認"
       check_mobile: "承認"
+      show: "実績"
+      all: "全問題"
 
   error:
     error_msg_1: "このフォームに"
@@ -156,6 +158,7 @@ ja:
     title: "クイズ"
     question: "問題"
     qn_short: "問題：　"
+    make: "問題作成"
     answer: "答え"
     correct: "正解"
     option1: "選択 1"
@@ -185,6 +188,8 @@ ja:
 
   edit:
     title: "プロフィルを変更する"
+    user: "ユーザー情報変更"
+    avatar: "http://gravatar.com/emails"
     submit: "変更を保存"
     change: "変更"
     language: "メニュー等の言語"

@@ -1,7 +1,7 @@
 ﻿# Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+zh-CN:
   welcome: "Welcome to the Y Quiz"
   title: "Y Quiz"
   intro1: "This is the home page for the "
@@ -53,7 +53,7 @@ en:
 
   footer:
     news: "Y news"
-    newsurl: "http://www.y.co.jp/en/news/index.html"
+    newsurl: "http://www.Y.co.jp/en/news/index.html"
 
   form:
     name: "Name"
@@ -106,8 +106,8 @@ en:
 
 # fix plurals
   stats:
-    following: "following"
-    followers: "followers"
+    following: "Following"
+    followers: "Followers"
     tests: "tests"
 
 # fix plurals

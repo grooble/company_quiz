@@ -1,11 +1,19 @@
 <%# TODO shift this code into a helper to make it neater. %>
-<%# Use in answer.html.erb and the home page.			 %>
+<%# Use in answer.html.erb and the home page.		      %>
 
+<% @user ||= current_user %>
 
-<% @question = Question.last() %>
-<p><%=t 'shared.take_test.quiz' %></p>
-<%= link_to t('shared.take_test.take_quiz'), ask_path(:id => @question.id), class: "btn btn-large btn-primary" %>
-<%= link_to t('shared.take_test.make'), make_path, class: "btn btn-large btn-primary" %>
-<% if current_user.admin? %>
-  <%= link_to t('shared.take_test.check_pending'), pending_path, class: "btn btn-large btn-primary" %>
+<% if signed_in? %>
+  <p><%=t 'shared.take_test.quiz' %></p>
+  <section>
+    <%= link_to t('shared.take_test.take_quiz'), ask_path, class: "btn btn-large btn-primary" %>
+    <%= link_to t('shared.take_test.make'), make_path, class: "btn btn-large btn-primary" %>
+  </section>
+  <section>
+    <%= link_to t('shared.take_test.show'), user_questions_path(:user_id => current_user.id), class: "btn btn-large btn-primary" %>
+    <%= link_to t('shared.take_test.all'), questions_all_path, class: "btn btn-large btn-primary" %>
+    <% if current_user.admin? %>
+      <%= link_to t('shared.take_test.check_pending'), pending_path, class: "btn btn-large btn-primary" %>
+    <% end %>
+  </section>
 <% end %>

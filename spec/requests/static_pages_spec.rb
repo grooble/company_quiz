@@ -7,7 +7,7 @@ describe "StaticPages" do
   describe "Home page" do
     before { visit root_path }
 	
-    it { should have_selector('h1', text: 'Yanmar Quiz') }
+    it { should have_selector('h1', text: I18n.t('welcome')) }
     it { should have_selector('title', text: full_title('')) }
 	
     describe "for signed-in users" do
@@ -32,8 +32,8 @@ describe "StaticPages" do
           visit root_path
         end
 
-        it { should have_link("0 following", href: following_user_path(user)) }
-        it { should have_link("1 followers", href: followers_user_path(user)) }
+        it { should have_link("0 #{I18n.t('stats.following')}", href: following_user_path(user)) }
+        it { should have_link("1 #{I18n.t('stats.followers')}", href: followers_user_path(user)) }
       end
     end
   end
@@ -41,21 +41,21 @@ describe "StaticPages" do
   describe "Help page" do
     before { visit help_path }
   
-	it { should have_selector('h1', text: 'Help') }
-	it { should have_selector('title', text: full_title('Help')) }
+	it { should have_selector('h1', text: I18n.t('static.help.title')) }
+	it { should have_selector('title', text: full_title(I18n.t('static.help.title'))) }
   end
   
   describe "About page" do
     before { visit about_path }
   
-    it { should have_selector('h1', text: 'About Us') }
-	it { should have_selector('title', text: full_title('About Us')) }
+    it { should have_selector('h1', text: I18n.t('static.about.title')) }
+	it { should have_selector('title', text: full_title(I18n.t('static.about.title'))) }
   end
   
   describe "Contact page" do
     before { visit contact_path }
 	
-	it { should have_selector('h1', text: 'Contact') }
-	it { should have_selector('title', text: full_title('Contact')) }
+	it { should have_selector('h1', text: I18n.t('static.contact.title')) }
+	it { should have_selector('title', text: full_title(I18n.t('static.contact.title'))) }
   end
 end

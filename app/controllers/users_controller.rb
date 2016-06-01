@@ -10,25 +10,25 @@ class UsersController < ApplicationController
   end
   
   def new
-    #@user = User.new
+    @user = User.new
 	# -----
-	flash[:info] = 'Registrations are not open yet, but please check back soon'
-    redirect_to root_path
+	#flash[:info] = 'Registrations are not open yet, but please check back soon'
+    #redirect_to root_path
   end
   
   def create
-    #@user = User.new(params[:user])
-	#if @user.save
-	#  sign_in @user
-	#  flash[:success] = t('welcome')
-	#  redirect_to @user
-	#else
-	#  render 'new'
-	#end
-	#
+    @user = User.new(params[:user])
+	if @user.save
+	  sign_in @user
+	  flash[:success] = t('welcome')
+	  redirect_to @user
+	else
+	  render 'new'
+	end
+	
 	# -----
-	flash[:info] = 'Registrations are not open yet, but please check back soon'
-    redirect_to root_path
+	#flash[:info] = 'Registrations are not open yet, but please check back soon'
+    #redirect_to root_path
   end
   
   def destroy
@@ -97,6 +97,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
+  end
+  
+  def takens
+    @user = User.find(params[:id])
+	@takens = Taken.first
   end
   
   private

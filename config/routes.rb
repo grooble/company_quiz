@@ -11,28 +11,34 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  resources :questions
   
-  resources :users do
-    collection do
-      get :questions
-    end
+#  resources :users do
+#    collection do
+#      get :questions
+#    end
+#  end
+
+  resources :users, only:[:show] do
+    resources :questions, only: [:index, :show]
   end
   
+  resources :questions, only:[:create, :update, :destroy]
   root to: 'static_pages#home'
   # adding quiz functionality
-  match '/answer', to: 'questions#answer'
-  match '/make', to: 'questions#new'
-  match '/approve', to: 'questions#approve'
+  get '/answer', to: 'questions#answer'
+  get '/make', to: 'questions#new'
+  put '/approve', to: 'questions#approve'
+  get 'questions/all', to: 'questions#show_all'
+  # post '/create', to: 'questions#create'
 
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  get '/signup',  to: 'users#new'
+  get '/signin',  to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'
 
   # match '/static_pages/home', to: 'static_pages#home'
-  match '/help', to: 'static_pages#help'
-  match '/about', to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
+  get '/help', to: 'static_pages#help'
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

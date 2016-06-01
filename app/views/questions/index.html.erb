@@ -1,0 +1,18 @@
+<h1>Questions</h1>
+
+<p>list of questions</p>
+
+<table>
+  <tr>
+    <th>
+	Question
+	</th>
+  </tr>
+  <% @questions.each_with_index do |q, i| %>
+  <tr>
+    <td><%=(i+1) %>) <%= q.qn %></td>
+  </tr>
+  <% end %>
+</table>
+
+<p> hello </p>
